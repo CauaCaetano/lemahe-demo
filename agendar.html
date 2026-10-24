@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Agendar avaliação · Clínica LEMAHE em Orlândia (SP)</title>
+<meta name="description" content="Escolha o tratamento, o dia e o horário da sua avaliação na Clínica LEMAHE e confirme pelo WhatsApp. Monte também o seu pacote de sessões.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#f6efe3">
+<meta property="og:type" content="website"><meta property="og:locale" content="pt_BR"><meta property="og:site_name" content="Clínica LEMAHE">
+<meta property="og:title" content="Agendar avaliação · Clínica LEMAHE em Orlândia (SP)"><meta property="og:description" content="Escolha o tratamento, o dia e o horário da sua avaliação na Clínica LEMAHE e confirme pelo WhatsApp. Monte também o seu pacote de sessões."><meta property="og:url" content="https://clinicalemahe.com.br/agendar.html"><meta property="og:image" content="https://clinicalemahe.com.br/img/compartilhar.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.ico" sizes="any"><link rel="icon" type="image/png" sizes="192x192" href="img/icone-192.png"><link rel="apple-touch-icon" href="img/icone-180.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&family=Marcellus&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/site.css?v=3">
+
+</head>
+<body>
+<a class="pular" href="#conteudo">Pular para o conteúdo</a>
+<header class="topo"><div class="wrap">
+  <a class="marca" href="index.html" aria-label="Clínica LEMAHE, página inicial"><img src="img/simbolo.webp" alt="" width="40" height="44"><b>LEMAHE</b></a>
+  <button class="abre-menu" type="button" aria-label="Abrir o menu" aria-expanded="false" aria-controls="menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+  <nav class="menu" id="menu" aria-label="Principal"><a href="index.html">Início</a><a href="tratamentos.html">Tratamentos</a><a href="a-clinica.html">A clínica</a><a class="bt" href="agendar.html" aria-current="page">Agendar avaliação</a></nav>
+</div></header>
+<main id="conteudo">
+<div class="wrap pagina-cab">
+  <span class="arco" aria-hidden="true"></span>
+  <h1>Agende sua avaliação</h1>
+  <p class="lead">Escolha o tratamento, o dia e o horário. A mensagem já vai pronta para o WhatsApp da clínica, e a Dra. Marina confirma o seu horário por lá.</p>
+</div>
+<div class="wrap agenda">
+  <form class="cartao" id="form-agenda" novalidate>
+    <h2>Dia e horário</h2>
+    <label class="campo">Tratamento
+      <select name="trat" id="ag-trat">
+        <option value="Avaliação (ainda não sei o tratamento)">Ainda não sei: quero uma avaliação</option>
+        <option value="Diástase abdominal" data-t="diastase">Diástase abdominal</option>
+        <option value="Lipedema" data-t="lipedema">Lipedema</option>
+        <option value="Flacidez e contorno corporal" data-t="flacidez">Flacidez e contorno corporal</option>
+        <option value="Gordura localizada (TikaIce / HidroHot 360°)" data-t="gordura">Gordura localizada (TikaIce / HidroHot 360°)</option>
+        <option value="LipoDetox e drenagem" data-t="lipodetox">LipoDetox e drenagem</option>
+        <option value="Massagem e terapia integrativa" data-t="massagem">Massagem e terapia integrativa</option>
+        <option value="Fisioterapia respiratória" data-t="respiratoria">Fisioterapia respiratória</option>
+        <option value="Fisioterapia em casa" data-t="domiciliar">Fisioterapia em casa</option>
+      </select>
+    </label>
+    <div class="campo" role="group" aria-labelledby="ag-dia-r"><span id="ag-dia-r">Dia</span><div class="dias" id="ag-dias"></div></div>
+    <div class="campo" role="group" aria-labelledby="ag-hora-r"><span id="ag-hora-r">Horário <small>(o horário é confirmado pela clínica)</small></span><div class="horas" id="ag-horas"></div></div>
+    <label class="campo">Seu nome<input name="nome" id="ag-nome" autocomplete="name" required></label>
+    <label class="campo">Quer contar algo antes? <small>(opcional)</small><textarea name="obs" id="ag-obs" placeholder="Ex.: tive bebê há 6 meses e sinto a barriga estufada"></textarea></label>
+    <p class="erro" id="ag-erro" role="alert"></p>
+    <button class="bt" type="submit"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .2-1.2c-.1-.2-.3-.2-.5-.3z"/></svg>Enviar pedido pelo WhatsApp</button>
+  </form>
+  <aside>
+    <form class="cartao" id="form-pacote" novalidate>
+      <h2>Monte seu pacote</h2>
+      <p class="resumo-pac">Já sabe o que quer fazer? Escolha os tratamentos e quantas sessões de cada, e peça o valor do pacote.</p>
+      <div class="pacote" id="pac-itens"></div>
+      <p class="resumo-pac" id="pac-resumo">Nenhum tratamento escolhido.</p>
+      <p class="erro" id="pac-erro" role="alert"></p>
+      <button class="bt leve" type="submit">Pedir o valor do pacote</button>
+    </form>
+    <div class="cartao" style="margin-top:20px">
+      <h2>Onde fica</h2>
+      <p>Av. C, 1270<br>Orlândia (SP)</p>
+      <p><a href="https://www.google.com/maps/search/?api=1&query=Av.+C,+1270,+Orl%C3%A2ndia+-+SP" target="_blank" rel="noopener">Abrir no mapa</a> · <a href="https://wa.me/5516992884458?text=Ol%C3%A1%2C%20Dra.%20Marina%21%20Vi%20o%20site%20da%20Cl%C3%ADnica%20LEMAHE%20e%20quero%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener">WhatsApp (16) 99288-4458</a></p>
+    </div>
+  </aside>
+</div>
+
+</main>
+<footer class="rodape"><div class="wrap">
+  <div><img src="img/logo-sem-fundo.webp" alt="LEMAHE: fisioterapia, estética, massagem e bem-estar" width="190" height="131" loading="lazy">
+    <p>LEMAHE – Fisioterapia, Estética Avançada e Terapia Integrativa.<br>Dra. Marina Caetano Guirardeli · CREFITO-3 216312-F</p></div>
+  <div><h3>Visite a clínica</h3><ul><li>Av. C, 1270</li><li>Orlândia · SP</li><li><a href="https://www.google.com/maps/search/?api=1&query=Av.+C,+1270,+Orl%C3%A2ndia+-+SP" target="_blank" rel="noopener">Abrir no mapa</a></li></ul></div>
+  <div><h3>Fale com a gente</h3><ul><li><a href="https://wa.me/5516992884458?text=Ol%C3%A1%21%20Vi%20o%20site%20da%20Cl%C3%ADnica%20LEMAHE%20e%20tenho%20uma%20d%C3%BAvida." target="_blank" rel="noopener">WhatsApp (16) 99288-4458</a></li><li><a href="https://www.instagram.com/dra.marinacguirardeli/" target="_blank" rel="noopener">Instagram @dra.marinacguirardeli</a></li><li><a href="privacidade.html">Privacidade</a></li></ul></div>
+  <p class="fim"><span>© <span data-ano>2026</span> Clínica LEMAHE · Orlândia (SP)</span><span>Site feito pela <a href="https://bluerose-store.com" target="_blank" rel="noopener">Blue Rose Express</a></span></p>
+</div></footer>
+<a class="zap" href="https://wa.me/5516992884458?text=Ol%C3%A1%21%20Vi%20o%20site%20da%20Cl%C3%ADnica%20LEMAHE%20e%20tenho%20uma%20d%C3%BAvida." target="_blank" rel="noopener" aria-label="Falar no WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .2-1.2c-.1-.2-.3-.2-.5-.3z"/></svg></a>
+<script src="js/site.js?v=3" defer></script>
+</body>
+</html>
