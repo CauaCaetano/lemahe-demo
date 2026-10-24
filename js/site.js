@@ -43,7 +43,7 @@
   // ------------------------------------------------ monte seu pacote
   var pac = $('#form-pacote');
   if (pac) {
-    var ITENS = ['Diástase abdominal', 'Lipedema', 'Flacidez e contorno corporal', 'Gordura localizada (TikaIce / HidroHot 360°)', 'LipoDetox e drenagem', 'Massagem e terapia integrativa'];
+    var ITENS = ['Diástase abdominal', 'Lipedema e drenagem linfática', 'Flacidez e contorno corporal', 'Gordura localizada (Gelo X / TikaIce)', 'HidroHot 360°', 'LipoDetox', 'Laser para dor e artrose', 'Terapia capilar com laser', 'Auriculoterapia', 'Ventosaterapia e massagem'];
     var box = $('#pac-itens');
     box.innerHTML = ITENS.map(function (n, k) { return '<label><input type="checkbox" data-k="' + k + '"><span>' + n + '</span><select data-s="' + k + '" aria-label="Sessões de ' + n + '">' + [5, 10, 15, 20].map(function (s) { return '<option value="' + s + '"' + (s === 10 ? ' selected' : '') + '>' + s + ' sessões</option>'; }).join('') + '</select></label>'; }).join('');
     var escolhidos = function () { return [].map.call(box.querySelectorAll('input:checked'), function (c) { var k = c.dataset.k; return ITENS[k] + ': ' + box.querySelector('[data-s="' + k + '"]').value + ' sessões'; }); };
