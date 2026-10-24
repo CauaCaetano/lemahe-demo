@@ -114,3 +114,5 @@
 }
 .selo-dra-centro { position: absolute; width: 9%; right: 5.5%; top: 6.5%; }
 @media (max-width: 860px) { .selo-dra-centro { width: 8%; right: 7%; top: 6%; } }
+.dra-bloco { overflow: hidden; }
+@media (max-width: 860px) { .selo-dra { right: 2%; top: -2%; } .selo-dra-centro { right: 10.5%; top: 7.5%; } }
