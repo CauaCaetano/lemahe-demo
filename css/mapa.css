@@ -1,0 +1,69 @@
+/* LEMAHE · mapa do corpo na abertura: desenho em traço dourado, pontos que pulsam e o painel do tratamento. */
+.mapa { background: radial-gradient(ellipse 60% 70% at 50% 45%, #fffaf1 0%, var(--papel) 60%, var(--creme) 100%); padding: clamp(28px, 4vw, 48px) 0 clamp(40px, 5vw, 64px); }
+.mapa-grade { width: min(1280px, 100% - 40px); margin-inline: auto; display: grid; grid-template-columns: minmax(0, 1fr) minmax(260px, 340px) minmax(0, 1.1fr); gap: clamp(20px, 3vw, 48px); align-items: center; min-height: calc(100svh - 72px - 80px); }
+.mapa-tag { font: 500 .74rem var(--sans); letter-spacing: .16em; text-transform: uppercase; color: var(--tinta-2); margin: 0 0 20px; }
+.mapa h1 { font-size: clamp(2.6rem, 4.8vw, 4.2rem); max-width: 8em; margin-bottom: 18px; }
+.mapa-lead { color: var(--tinta-2); max-width: 26em; margin-bottom: 26px; }
+.mapa-lista { display: flex; flex-direction: column; align-items: flex-start; border-top: 1px solid var(--linha); }
+.mapa-lista button { width: 100%; text-align: left; padding: 11px 0; border: 0; border-bottom: 1px solid var(--linha); background: none; cursor: pointer; font: 500 1.25rem var(--serif); color: var(--tinta-2); display: flex; align-items: center; gap: 12px; transition: color .25s, padding .35s var(--facil, ease); }
+.mapa-lista button::before { content: ''; width: 7px; height: 7px; border-radius: 50%; border: 1px solid var(--dourado); flex: none; transition: background .25s; }
+.mapa-lista button:hover { color: var(--oliva-esc); padding-left: 6px; }
+.mapa-lista button[aria-pressed="true"] { color: var(--oliva-esc); padding-left: 6px; }
+.mapa-lista button[aria-pressed="true"]::before { background: var(--dourado); }
+
+/* o corpo */
+.mapa-corpo { display: grid; place-items: center; }
+.corpo-caixa { position: relative; height: min(76svh, 640px); aspect-ratio: 300 / 640; }
+.corpo { width: 100%; height: 100%; display: block; overflow: visible; }
+.corpo .traco { fill: #f6eddd; stroke: var(--dourado); stroke-width: 1.5; stroke-linejoin: round; stroke-dasharray: 1; stroke-dashoffset: 1; transition: stroke-dashoffset 2.4s cubic-bezier(.65, 0, .35, 1); }
+.corpo .fio { fill: none; } .corpo .fino { fill: none; stroke-width: 1; }
+.mapa.pronto .corpo .traco { stroke-dashoffset: 0; }
+.corpo .aura { transition: cx .7s var(--facil, ease), cy .7s var(--facil, ease), r .7s var(--facil, ease), opacity .4s; }
+
+.ponto { position: absolute; left: var(--x); top: var(--y); width: 44px; height: 44px; margin: -22px 0 0 -22px; border: 0; padding: 0; background: none; cursor: pointer; display: grid; place-items: center; opacity: 0; transition: opacity .6s 1.6s; }
+.mapa.pronto .ponto { opacity: 1; }
+.ponto::before { content: ''; width: 14px; height: 14px; border-radius: 50%; background: var(--dourado); box-shadow: 0 0 0 4px rgb(196 154 89 / .25); transition: transform .3s, background .3s; }
+.ponto::after { content: ''; position: absolute; width: 14px; height: 14px; border-radius: 50%; border: 1px solid var(--dourado); animation: pulso 2.6s infinite; }
+.ponto[aria-pressed="true"]::before { background: var(--oliva-esc); transform: scale(1.15); box-shadow: 0 0 0 5px rgb(196 154 89 / .5); }
+.ponto span { position: absolute; left: calc(50% + 16px); top: 50%; transform: translate(-6px, -50%); white-space: nowrap; font: 500 .72rem var(--sans); letter-spacing: .12em; text-transform: uppercase; color: var(--oliva-esc); background: rgb(251 247 239 / .92); padding: 4px 9px; border-radius: 999px; opacity: 0; pointer-events: none; transition: opacity .25s, transform .25s; }
+.ponto:hover span, .ponto:focus-visible span, .ponto[aria-pressed="true"] span { opacity: 1; transform: translate(0, -50%); }
+.ponto[data-area="emocoes"] span, .ponto[data-area="joelho"] span { left: auto; right: calc(50% + 16px); transform: translate(6px, -50%); }
+.ponto[data-area="emocoes"]:hover span, .ponto[data-area="joelho"]:hover span, .ponto[data-area="emocoes"][aria-pressed="true"] span, .ponto[data-area="joelho"][aria-pressed="true"] span { transform: translate(0, -50%); }
+@keyframes pulso { from { transform: scale(1); opacity: .9; } to { transform: scale(3.2); opacity: 0; } }
+
+/* painel do tratamento */
+.mapa-painel { background: #fffdf8; border: 1px solid var(--linha); border-radius: 22px; padding: 18px; box-shadow: 0 30px 60px -40px rgb(63 76 51 / .45); }
+.mapa-painel.entra > * { animation: entra .55s cubic-bezier(.22, 1, .36, 1) both; }
+.mapa-painel.entra > :nth-child(2) { animation-delay: .04s; } .mapa-painel.entra > :nth-child(3) { animation-delay: .08s; } .mapa-painel.entra > :nth-child(n+4) { animation-delay: .12s; }
+@keyframes entra { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+.mp-area { font: 500 .72rem var(--sans); letter-spacing: .16em; text-transform: uppercase; color: var(--marrom); margin: 4px 4px 12px; }
+.mp-midia { position: relative; margin: 0 0 16px; aspect-ratio: 16 / 11; border-radius: 14px; overflow: hidden; background: var(--creme); }
+.mp-midia img, .mp-midia video { width: 100%; height: 100%; object-fit: cover; display: block; }
+.mp-midia figcaption { position: absolute; left: 10px; bottom: 10px; font-size: .78rem; background: rgb(251 247 239 / .92); color: var(--tinta-2); padding: 4px 10px; border-radius: 999px; }
+.mp-titulo { font-size: clamp(1.7rem, 2.4vw, 2.2rem); margin: 0 4px 8px; }
+.mp-texto { color: var(--tinta-2); margin: 0 4px 14px; font-size: .98rem; }
+.mp-chips { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 4px 16px; }
+.mp-chips:empty { display: none; }
+.mp-chips button { border: 1px solid var(--linha); background: none; border-radius: 999px; padding: 6px 12px; font: 500 .82rem var(--sans); color: var(--tinta-2); cursor: pointer; transition: border-color .2s, background .2s, color .2s; }
+.mp-chips button:hover { border-color: var(--oliva); color: var(--oliva-esc); }
+.mp-chips button[aria-pressed="true"] { background: var(--oliva); border-color: var(--oliva); color: #fff; }
+.mp-acoes { display: flex; align-items: center; gap: 22px; flex-wrap: wrap; margin: 0 4px 4px; }
+
+@media (max-width: 1060px) and (min-width: 861px) { .mapa-grade { grid-template-columns: 1fr 1fr; } .mapa-intro { grid-column: 1 / -1; } .mapa-lista { flex-direction: row; flex-wrap: wrap; gap: 6px; border: 0; } .mapa-lista button { width: auto; border: 1px solid var(--linha); border-radius: 999px; padding: 6px 14px; font-size: 1rem; } }
+@media (max-width: 860px) {
+  .mapa-grade { grid-template-columns: 1fr; min-height: 0; gap: 18px; }
+  .mapa h1 { font-size: clamp(2.2rem, 10vw, 2.8rem); max-width: none; }
+  .mapa-lead { margin-bottom: 0; }
+  .mapa-lista { order: 3; flex-direction: row; flex-wrap: nowrap; overflow-x: auto; gap: 6px; border: 0; padding-bottom: 4px; margin: 0 -20px; padding-inline: 20px; scrollbar-width: none; }
+  .mapa-intro { display: contents; }
+  .mapa-intro > p, .mapa-intro > h1 { order: 0; }
+  .mapa-corpo { order: 2; }
+  .mapa-painel { order: 4; }
+  .mapa-lista button { width: auto; flex: none; border: 1px solid var(--linha); border-radius: 999px; padding: 7px 14px; font: 500 .9rem var(--sans); }
+  .mapa-lista button::before { display: none; }
+  .mapa-lista button[aria-pressed="true"] { background: var(--oliva); border-color: var(--oliva); color: #fff; padding-left: 14px; }
+  .corpo-caixa { height: 58svh; }
+  .ponto span { display: none; }
+  .ponto[aria-pressed="true"] span { display: block; }
+}
+@media (prefers-reduced-motion: reduce) { .corpo .traco { stroke-dashoffset: 0; transition: none; } .ponto { opacity: 1; transition: none; } .ponto::after { animation: none; } }
