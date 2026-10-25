@@ -1,0 +1,78 @@
+/* LEMAHE · passeio pela clínica em 3D: cena em tela cheia, cartão de boas-vindas, texto do espaço, abas e ficha do tratamento. */
+.passeio { position: relative; height: calc(100vh - 72px); height: calc(100svh - 72px); min-height: 520px; overflow: hidden; background: radial-gradient(ellipse at 50% 40%, #fffaf2, var(--creme)); outline: none; }
+.ps-cena { position: absolute; inset: 0; width: 100%; height: 100%; display: block; touch-action: pan-y; opacity: 0; transition: opacity 1.2s; }
+.passeio.pronto .ps-cena { opacity: 1; }
+
+/* boas-vindas, como o cartão da loja La Rosée */
+.ps-boas { position: absolute; left: 50%; bottom: clamp(24px, 6vh, 64px); transform: translateX(-50%); width: min(440px, calc(100% - 32px)); text-align: center; padding: 26px 28px 22px; border-radius: 26px; background: rgb(255 252 246 / .78); backdrop-filter: blur(14px) saturate(1.2); -webkit-backdrop-filter: blur(14px) saturate(1.2); border: 1px solid rgb(255 255 255 / .8); box-shadow: 0 30px 60px -36px rgb(63 76 51 / .55), inset 0 1px 0 rgb(255 255 255 / .9); transition: opacity .6s, transform .8s cubic-bezier(.22, 1, .36, 1); z-index: 3; }
+.ps-tag { font: 500 .7rem var(--sans); letter-spacing: .16em; text-transform: uppercase; color: var(--marrom); margin: 0 0 10px; }
+.ps-boas h1 { font-size: clamp(2rem, 3.4vw, 2.7rem); margin: 0 0 10px; }
+.ps-boas p { color: var(--tinta-2); font-size: .98rem; margin: 0 auto 18px; max-width: 30em; }
+.ps-boas .bt { margin: 0 auto 12px; display: flex; width: fit-content; }
+.passeio.dentro .ps-boas { opacity: 0; transform: translate(-50%, 30px); pointer-events: none; }
+
+/* texto do espaço atual */
+.ps-texto { position: absolute; left: max(20px, calc((100vw - var(--larg)) / 2)); top: clamp(20px, 5vh, 48px); width: min(360px, calc(100% - 40px)); z-index: 2; opacity: 0; transition: opacity .5s; pointer-events: none; }
+.passeio.dentro .ps-texto { opacity: 1; pointer-events: auto; }
+.ps-texto.troca > * { animation: ps-entra .8s cubic-bezier(.22, 1, .36, 1) both; } .ps-texto.troca > :nth-child(2) { animation-delay: .06s; } .ps-texto.troca > :nth-child(n+3) { animation-delay: .12s; }
+@keyframes ps-entra { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+.ps-nome { font: 500 .72rem var(--sans); letter-spacing: .16em; text-transform: uppercase; color: var(--marrom); margin: 0 0 8px; }
+.ps-tit { font-size: clamp(2rem, 3.6vw, 3rem); margin: 0 0 10px; }
+.ps-txt { color: var(--tinta-2); margin: 0 0 16px; font-size: .98rem; text-shadow: 0 0 18px #fbf7ef; }
+
+/* rótulos das bolhas: botões de verdade, presos à posição 3D */
+.ps-rotulos { position: absolute; inset: 0; pointer-events: none; z-index: 2; }
+.ps-rotulo { position: absolute; left: 0; top: 0; pointer-events: none; opacity: 0; border: 1px solid rgb(201 164 100 / .6); background: rgb(255 252 246 / .9); backdrop-filter: blur(6px); color: var(--oliva-esc); border-radius: 999px; padding: 6px 13px; font: 500 .8rem var(--sans); white-space: nowrap; cursor: pointer; transition: opacity .35s, background .2s; }
+.ps-rotulo.mostra { opacity: 1; pointer-events: auto; }
+.ps-rotulo:hover { background: #fff; }
+
+/* abas dos espaços */
+.ps-nav { position: absolute; left: 50%; bottom: clamp(14px, 3vh, 28px); transform: translateX(-50%); display: flex; align-items: center; gap: 6px; padding: 6px; border-radius: 999px; background: rgb(255 252 246 / .82); backdrop-filter: blur(12px); border: 1px solid rgb(255 255 255 / .8); box-shadow: 0 18px 40px -26px rgb(63 76 51 / .6); z-index: 3; opacity: 0; transition: opacity .6s .3s; pointer-events: none; max-width: calc(100% - 24px); }
+.passeio.dentro .ps-nav { opacity: 1; pointer-events: auto; }
+.ps-abas { display: flex; gap: 2px; overflow-x: auto; scrollbar-width: none; }
+.ps-abas button { border: 0; background: none; border-radius: 999px; padding: 8px 14px; font: 500 .84rem var(--sans); color: var(--tinta-2); cursor: pointer; white-space: nowrap; transition: background .25s, color .25s; }
+.ps-abas button[aria-current="step"] { background: var(--oliva); color: #fff; }
+.ps-seta { width: 38px; height: 38px; border-radius: 50%; border: 1px solid var(--linha); background: #fff; cursor: pointer; display: grid; place-items: center; flex: none; }
+.ps-seta::before { content: ''; width: 8px; height: 8px; border-top: 1.5px solid var(--oliva-esc); border-right: 1.5px solid var(--oliva-esc); transform: translateX(2px) rotate(-135deg); }
+.ps-prox::before { transform: translateX(-2px) rotate(45deg); }
+
+/* ficha do tratamento */
+.ps-ficha { width: min(760px, calc(100% - 24px)); padding: 0; border: 0; border-radius: 26px; background: #fffdf8; box-shadow: 0 40px 90px -30px rgb(40 46 30 / .6); overflow: hidden; }
+.ps-ficha[open] { display: grid; grid-template-columns: 1fr 1fr; animation: ps-ficha .5s cubic-bezier(.22, 1, .36, 1); }
+.ps-ficha::backdrop { background: rgb(63 76 51 / .35); backdrop-filter: blur(4px); }
+@keyframes ps-ficha { from { opacity: 0; transform: translateY(20px) scale(.97); } to { opacity: 1; transform: none; } }
+.pf-midia { aspect-ratio: 4 / 5; background: var(--creme); }
+.pf-midia img, .pf-midia video { width: 100%; height: 100%; object-fit: cover; display: block; }
+.pf-corpo { padding: 32px 28px; display: flex; flex-direction: column; justify-content: center; }
+.pf-corpo h3 { font-size: clamp(1.8rem, 3vw, 2.4rem); margin: 0 0 12px; }
+.pf-corpo p { color: var(--tinta-2); margin: 0 0 22px; }
+.pf-acoes { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
+.pf-fecha { position: absolute; right: 12px; top: 12px; width: 40px; height: 40px; border-radius: 50%; border: 0; background: rgb(255 252 246 / .9); cursor: pointer; z-index: 2; }
+.pf-fecha::before, .pf-fecha::after { content: ''; position: absolute; left: 12px; right: 12px; top: 19px; height: 1.5px; background: var(--oliva-esc); transform: rotate(45deg); }
+.pf-fecha::after { transform: rotate(-45deg); }
+
+/* sem 3D: lista simples dos espaços */
+.ps-plano { display: none; }
+.passeio.plano { height: auto; min-height: 0; padding: 48px 0; }
+.passeio.plano .ps-cena, .passeio.plano .ps-nav, .passeio.plano .ps-texto, .passeio.plano .ps-rotulos { display: none; }
+.passeio.plano .ps-boas { position: static; transform: none; margin: 0 auto 32px; }
+.passeio.plano .ps-boas .bt { display: none; }
+.passeio.plano .ps-plano { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 24px; }
+.ps-esp h2 { font-size: 1.6rem; } .ps-esp p { color: var(--tinta-2); font-size: .95rem; }
+
+@media (max-width: 860px) {
+  .passeio { height: calc(100svh - 64px); }
+  .ps-texto { top: 14px; left: 16px; right: 16px; width: auto; }
+  .ps-tit { font-size: 1.75rem; margin-bottom: 4px; }
+  .ps-txt { font-size: .88rem; margin-bottom: 10px; }
+  .ps-nav { bottom: 14px; }
+  .ps-boas { bottom: 20px; padding: 20px 20px 16px; }
+  .ps-ficha[open] { grid-template-columns: 1fr; max-height: calc(100svh - 24px); overflow-y: auto; }
+  .pf-midia { aspect-ratio: 1; }
+  .pf-corpo { padding: 22px 20px 24px; }
+}
+.ps-fim[hidden] { display: none; }
+.passeio::before { content: ''; position: absolute; inset: 0; z-index: 1; pointer-events: none; opacity: 0; transition: opacity .6s; background: linear-gradient(90deg, rgb(251 247 239 / .88) 0%, rgb(251 247 239 / .55) 26%, rgb(251 247 239 / 0) 44%); }
+.passeio.dentro::before { opacity: 1; }
+@media (min-width: 861px) { .ps-boas { left: auto; right: max(24px, calc((100vw - var(--larg)) / 2)); top: 50%; bottom: auto; transform: translateY(-50%); text-align: left; } .ps-boas p { margin-left: 0; } .ps-boas .bt { margin-left: 0; } .passeio.dentro .ps-boas { transform: translate(0, calc(-50% + 30px)); } }
+@media (max-width: 860px) { .passeio::before { background: linear-gradient(180deg, rgb(251 247 239 / .92) 0%, rgb(251 247 239 / .6) 22%, rgb(251 247 239 / 0) 34%); } }
