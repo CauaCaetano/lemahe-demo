@@ -16,7 +16,7 @@ function semWebGL() { try { const c = document.createElement('canvas'); return !
 if (sec) { if (calmo || semWebGL()) { sec.classList.add('parada', 'pronto'); } else iniciar(); }
 
 function iniciar() {
-  const canvas = sec.querySelector('.bl-cena'), rotulos = sec.querySelector('.bl-rotulos'), conta = sec.querySelector('.bl-conta');
+  const texto = sec.querySelector('.bl-texto'), canvas = sec.querySelector('.bl-cena'), rotulos = sec.querySelector('.bl-rotulos'), conta = sec.querySelector('.bl-conta');
   const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: false });
   renderer.setPixelRatio(Math.min(devicePixelRatio, 1.75)); renderer.outputColorSpace = THREE.SRGBColorSpace;
   renderer.toneMapping = THREE.ACESFilmicToneMapping; renderer.toneMappingExposure = 1;
@@ -108,7 +108,8 @@ function iniciar() {
       if (e > .5 && !b.ligado) { b.ligado = true; const pr = b.v.play(); if (pr && pr.then) pr.then(() => { b.disco.material.map = b.vt; b.disco.material.needsUpdate = true; }).catch(() => {}); }
       v3.copy(b.gr.position); v3.y -= .78 * (cel ? .8 : 1); v3.project(cam);
       const lx = Math.min(w - b.r.offsetWidth / 2 - 8, Math.max(b.r.offsetWidth / 2 + 8, (v3.x + 1) / 2 * w));
-      b.r.style.transform = `translate(${lx.toFixed(1)}px, ${((1 - v3.y) / 2 * h).toFixed(1)}px) translate(-50%, 0)`; b.r.classList.toggle('mostra', e > .9 && p < .3);
+      b.r.style.transform = `translate(${lx.toFixed(1)}px, ${((1 - v3.y) / 2 * h).toFixed(1)}px) translate(-50%, 0)`; const ly = (1 - v3.y) / 2 * h, cr = canvas.getBoundingClientRect(), tr = texto.getBoundingClientRect(), sobre = lx > tr.left - cr.left - 80 && lx < tr.right - cr.left + 40 && ly > tr.top - cr.top - 30;
+      b.r.classList.toggle('mostra', e > .9 && p < .3 && !sobre);
     });
     renderer.render(cena, cam);
   });
