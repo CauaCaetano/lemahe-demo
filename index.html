@@ -13,8 +13,8 @@
 <link rel="icon" href="favicon.ico" sizes="any"><link rel="icon" type="image/png" sizes="192x192" href="img/icone-192.png"><link rel="apple-touch-icon" href="img/icone-180.png">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Figtree:wght@400;500;600&family=Marcellus&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/site.css?v=14"><link rel="stylesheet" href="css/vivo.css?v=14"><link rel="stylesheet" href="css/editorial.css?v=14"><link rel="stylesheet" href="css/agenda.css?v=14"><link rel="stylesheet" href="css/passeio.css?v=14"><link rel="stylesheet" href="css/bolha.css?v=14">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Figtree:wght@400;500;600&family=Hanken+Grotesk:wght@400;500;600&family=Instrument+Serif:ital@0;1&family=Marcellus&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/site.css?v=15"><link rel="stylesheet" href="css/vivo.css?v=15"><link rel="stylesheet" href="css/editorial.css?v=15"><link rel="stylesheet" href="css/agenda.css?v=15"><link rel="stylesheet" href="css/bolha.css?v=15"><link rel="stylesheet" href="css/tk.css?v=15">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": ["MedicalClinic", "PhysicalTherapy"], "name": "LEMAHE – Fisioterapia, Estética Avançada e Terapia Integrativa", "alternateName": "Clínica LEMAHE", "url": "https://clinicalemahe.com.br/", "image": "https://clinicalemahe.com.br/img/compartilhar.jpg", "logo": "https://clinicalemahe.com.br/img/icone-512.png", "telephone": "+5516992884458", "address": {"@type": "PostalAddress", "streetAddress": "Av. C, 1270", "addressLocality": "Orlândia", "addressRegion": "SP", "addressCountry": "BR"}, "founder": {"@type": "Person", "name": "Dra. Marina Caetano Guirardeli", "jobTitle": "Fisioterapeuta", "identifier": "CREFITO-3 216312-F"}, "sameAs": ["https://www.instagram.com/dra.marinacguirardeli/"], "medicalSpecialty": ["Dermatology", "PhysicalTherapy"]}</script>
 </head>
 <body>
@@ -25,24 +25,21 @@
   <nav class="menu" id="menu" aria-label="Principal"><a href="index.html" aria-current="page">Início</a><a href="tratamentos.html">Tratamentos</a><a href="a-clinica.html">A clínica</a><a class="bt" href="agendar.html">Agendar avaliação</a></nav>
 </div></header>
 <main id="conteudo">
-<section class="bolha" aria-label="Clínica LEMAHE">
-  <canvas class="bl-cena" aria-hidden="true"></canvas>
-  <div class="bl-rotulos"></div>
-  <p class="bl-conta" aria-hidden="true">0%</p>
-  <div class="bl-texto">
-    <h1>Fisioterapia e estética com um protocolo feito para você.</h1>
-    <p>Clínica da Dra. Marina Caetano Guirardeli em Orlândia. Toque nas bolhas para ver os tratamentos.</p>
-    <div class="bl-acoes"><a class="bt" href="agendar.html">Agendar avaliação</a><a class="link-fino" href="tratamentos.html">Ver tratamentos</a></div>
+<section class="tk-hero" aria-label="Clínica LEMAHE">
+  <div class="tk-hero-midia"><video class="tk-auto" muted playsinline loop preload="none" poster="video/auriculoterapia.jpg" data-src="video/auriculoterapia.mp4"></video><video class="tk-auto tk-v2" muted playsinline loop preload="none" poster="video/laser-joelho.jpg" data-src="video/laser-joelho.mp4"></video></div>
+  <div class="tk-hero-texto">
+    <h1><span>Fisioterapia que trata,</span> <em>estética que cuida</em></h1>
+    <p>Clínica LEMAHE · Orlândia (SP). Todo tratamento começa por uma avaliação.</p>
   </div>
-  <p class="bl-rolar" aria-hidden="true">Role para conhecer</p>
-  <dialog class="ps-ficha" aria-label="Tratamento">
-    <button type="button" class="pf-fecha" aria-label="Fechar"></button>
-    <div class="pf-midia"></div>
-    <div class="pf-corpo"><h3></h3><p></p><div class="pf-acoes"><a class="bt pf-agendar" href="agendar.html">Agendar avaliação</a><a class="link-fino pf-mais" href="tratamentos.html">Ver detalhes</a></div></div>
-  </dialog>
+  <a class="tk-pilula" href="agendar.html"><span>Agendar avaliação</span><i aria-hidden="true"></i></a>
 </section>
-<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.min.js"}}</script>
-<script type="module" src="js/bolha.js?v=14"></script>
+<div class="tk-par"><video class="tk-auto" muted playsinline loop preload="none" poster="video/funcional.jpg" data-src="video/funcional.mp4"></video><video class="tk-auto" muted playsinline loop preload="none" poster="video/drenagem.jpg" data-src="video/drenagem.mp4"></video></div>
+
+<section class="tk-manifesto"><div class="wrap">
+  <h2 class="revela"><span>Fisioterapia, estética</span> <span>e bem-estar</span> <em>com método.</em></h2>
+  <p class="revela">Dor, diástase, lipedema, flacidez, gordura localizada, cabelo e ansiedade, com um protocolo montado na sua avaliação.</p>
+  <svg class="tk-curva" viewBox="0 0 400 300" aria-hidden="true"><path d="M10 40 C 220 20, 380 90, 330 180 S 160 300, 60 290"/></svg>
+</div></section>
 
 <section class="elipse"><div class="wrap elipse-grade">
   <div class="el-texto revela">
@@ -61,12 +58,37 @@
   </div>
 </div></section>
 
-<section class="declara"><div class="wrap declara-grade">
-  <figure class="declara-foto revela"><img src="img/fotos/dra-marina-circulo.webp" alt="Dra. Marina Caetano Guirardeli no consultório da Clínica LEMAHE" width="900" height="900" loading="lazy"></figure>
-  <div>
-    <p class="declara-frase revela">Na LEMAHE, cada paciente tem o próprio protocolo. A Dra. Marina avalia, explica o que está acontecendo e monta o tratamento com os recursos certos para o seu caso.</p>
-    <div class="declara-pe revela"><p>Fisioterapia dermatofuncional, estética avançada e terapia integrativa no mesmo lugar, na Av. C, 1270, em Orlândia. Também com atendimento em casa.</p><a class="link-fino" href="a-clinica.html">Conhecer a clínica</a></div>
+<section class="tk-explore"><div class="wrap"><h2 class="revela"><span>Conheça os</span> <em>tratamentos</em></h2><span class="tk-desce" aria-hidden="true"></span></div></section>
+
+<section class="tk-colecao tk-blush">
+  <figure class="tk-col-midia"><video class="tk-auto" muted playsinline loop preload="none" poster="video/terapia-capilar.jpg" data-src="video/terapia-capilar.mp4"></video></figure>
+  <div class="tk-col-lado">
+    <div class="tk-col-cab"><h3>Estética <em>avançada</em></h3><div class="tk-setas"><button type="button" class="tk-seta tk-volta" aria-label="Voltar"></button><button type="button" class="tk-seta" aria-label="Avançar"></button></div></div>
+    <div class="tk-trilho" tabindex="0" aria-label="Tratamentos de estética avançada"><a class="tk-card" href="tratamentos.html#gordura"><span class="tk-tag">Estética avançada</span><span class="tk-card-img"><img src="img/fotos/tikaice-2.webp" alt="" loading="lazy"></span><b>Método Gelo X</b><small>Gordura localizada e flacidez</small></a><a class="tk-card" href="tratamentos.html#gordura"><span class="tk-tag">Estética avançada</span><span class="tk-card-img"><img src="img/fotos/hidrohot-resultado.webp" alt="" loading="lazy"></span><b>HidroHot 360°</b><small>Firmeza e contorno</small></a><a class="tk-card" href="tratamentos.html#gordura"><span class="tk-tag">Estética avançada</span><span class="tk-card-img"><img src="img/fotos/lipotika-2.webp" alt="" loading="lazy"></span><b>LipoTika</b><small>Contorno abdominal</small></a><a class="tk-card" href="tratamentos.html#flacidez"><span class="tk-tag">Estética avançada</span><span class="tk-card-img"><img src="img/fotos/lipedema-flacidez.webp" alt="" loading="lazy"></span><b>Flacidez e lipedema</b><small>Pele mais firme</small></a><a class="tk-card" href="tratamentos.html#capilar"><span class="tk-tag">Estética avançada</span><span class="tk-card-img"><img src="video/terapia-capilar.jpg" alt="" loading="lazy"></span><b>Terapia capilar</b><small>Laser para os fios</small></a></div>
+    <p class="tk-col-pe">Os protocolos são montados na avaliação e podem ser combinados entre si.</p>
   </div>
+</section>
+<section class="tk-colecao tk-salvia">
+  <figure class="tk-col-midia"><video class="tk-auto" muted playsinline loop preload="none" poster="video/funcional.jpg" data-src="video/funcional.mp4"></video></figure>
+  <div class="tk-col-lado">
+    <div class="tk-col-cab"><h3>Fisio<em>terapia</em></h3><div class="tk-setas"><button type="button" class="tk-seta tk-volta" aria-label="Voltar"></button><button type="button" class="tk-seta" aria-label="Avançar"></button></div></div>
+    <div class="tk-trilho" tabindex="0" aria-label="Tratamentos de fisioterapia"><a class="tk-card" href="tratamentos.html#diastase"><span class="tk-tag">Fisioterapia</span><span class="tk-card-img"><img src="img/fotos/diastase-antes-depois.webp" alt="" loading="lazy"></span><b>Diástase abdominal</b><small>Função, postura e cintura</small></a><a class="tk-card" href="tratamentos.html#dor"><span class="tk-tag">Fisioterapia</span><span class="tk-card-img"><img src="video/laser-joelho.jpg" alt="" loading="lazy"></span><b>Laser para artrose</b><small>Menos dor no joelho</small></a><a class="tk-card" href="tratamentos.html#dor"><span class="tk-tag">Fisioterapia</span><span class="tk-card-img"><img src="video/neuromuscular.jpg" alt="" loading="lazy"></span><b>Facilitação neuromuscular</b><small>Força e controle</small></a><a class="tk-card" href="tratamentos.html#dor"><span class="tk-tag">Fisioterapia</span><span class="tk-card-img"><img src="video/funcional.jpg" alt="" loading="lazy"></span><b>Treinamento funcional</b><small>Equilíbrio no dia a dia</small></a><a class="tk-card" href="tratamentos.html#domiciliar"><span class="tk-tag">Fisioterapia</span><span class="tk-card-img"><img src="video/domiciliar.jpg" alt="" loading="lazy"></span><b>Fisioterapia em casa</b><small>Reabilitação e respiratória</small></a></div>
+    <p class="tk-col-pe">Na clínica ou em casa, para quem não pode se deslocar.</p>
+  </div>
+</section>
+<section class="tk-colecao tk-areia">
+  <figure class="tk-col-midia"><video class="tk-auto" muted playsinline loop preload="none" poster="video/drenagem.jpg" data-src="video/drenagem.mp4"></video></figure>
+  <div class="tk-col-lado">
+    <div class="tk-col-cab"><h3>Terapia <em>integrativa</em></h3><div class="tk-setas"><button type="button" class="tk-seta tk-volta" aria-label="Voltar"></button><button type="button" class="tk-seta" aria-label="Avançar"></button></div></div>
+    <div class="tk-trilho" tabindex="0" aria-label="Tratamentos de terapia integrativa"><a class="tk-card" href="tratamentos.html#integrativa"><span class="tk-tag">Terapia integrativa</span><span class="tk-card-img"><img src="video/auriculoterapia.jpg" alt="" loading="lazy"></span><b>Auriculoterapia</b><small>Ansiedade e tensão</small></a><a class="tk-card" href="tratamentos.html#lipedema"><span class="tk-tag">Terapia integrativa</span><span class="tk-card-img"><img src="video/drenagem.jpg" alt="" loading="lazy"></span><b>Drenagem linfática</b><small>Menos inchaço</small></a><a class="tk-card" href="tratamentos.html#integrativa"><span class="tk-tag">Terapia integrativa</span><span class="tk-card-img"><img src="video/ventosaterapia.jpg" alt="" loading="lazy"></span><b>Ventosaterapia</b><small>Alívio das costas</small></a><a class="tk-card" href="tratamentos.html#dor"><span class="tk-tag">Terapia integrativa</span><span class="tk-card-img"><img src="video/ilib.jpg" alt="" loading="lazy"></span><b>Laser ILIB</b><small>Laserterapia sistêmica</small></a><a class="tk-card" href="tratamentos.html#lipodetox"><span class="tk-tag">Terapia integrativa</span><span class="tk-card-img"><img src="video/lipodetox.jpg" alt="" loading="lazy"></span><b>LipoDetox</b><small>Corpo menos pesado</small></a></div>
+    <p class="tk-col-pe">Cuidado para o corpo e para as emoções, em sessões tranquilas.</p>
+  </div>
+</section>
+
+<section class="tk-grande"><div class="wrap">
+  <span class="tk-etiqueta">Nosso jeito</span>
+  <h2 class="revela"><span>Avaliação antes</span> <span>de tudo.</span> <em>Sem promessa.</em></h2>
+  <a class="tk-circulo" href="a-clinica.html"><i aria-hidden="true"></i><span>Conhecer a clínica</span></a>
 </div></section>
 
 <div class="horarios-faixa"><div class="wrap">
@@ -75,10 +97,18 @@
   <a class="bt leve" href="agendar.html">Ver a agenda</a>
 </div></div>
 
-<div class="faixa" aria-label="Serviços da clínica"><div class="faixa-trilho">
-  <span>Diástase</span><span>Lipedema</span><span>Flacidez</span><span>Método Gelo X</span><span>HidroHot 360°</span><span>Drenagem linfática</span><span>LipoDetox</span><span>Laser ILIB</span><span>Terapia capilar</span><span>Auriculoterapia</span><span>Ventosaterapia</span><span>Fisioterapia em casa</span>
-  <span aria-hidden="true">Diástase</span><span aria-hidden="true">Lipedema</span><span aria-hidden="true">Flacidez</span><span aria-hidden="true">Método Gelo X</span><span aria-hidden="true">HidroHot 360°</span><span aria-hidden="true">Drenagem linfática</span><span aria-hidden="true">LipoDetox</span><span aria-hidden="true">Laser ILIB</span><span aria-hidden="true">Terapia capilar</span><span aria-hidden="true">Auriculoterapia</span><span aria-hidden="true">Ventosaterapia</span><span aria-hidden="true">Fisioterapia em casa</span>
-</div></div>
+<section class="bloco resultados"><div class="wrap">
+  <div class="cab-bloco surge"><span class="arco" aria-hidden="true"></span><h2>Resultados de pacientes da clínica</h2><p class="lead">Fotos de pacientes em tratamento com a Dra. Marina, publicadas com autorização.</p></div>
+  <div class="mosaico">
+    <button class="foto f-alta surge" data-zoom="img/fotos/diastase-antes-depois.webp"><img src="img/fotos/diastase-antes-depois.webp" alt="Antes e depois de 3 sessões de tratamento para diástase abdominal" loading="lazy" width="900" height="818"><span>Diástase · 3 sessões</span></button>
+    <button class="foto surge" data-zoom="img/fotos/tikaice-1.webp"><img src="img/fotos/tikaice-1.webp" alt="Antes e depois do Protocolo TikaIce, Método Gelo X, no abdômen" loading="lazy" width="825" height="1100"><span>Método Gelo X · TikaIce</span></button>
+    <button class="foto surge" data-zoom="img/fotos/lipedema-flacidez.webp"><img src="img/fotos/lipedema-flacidez.webp" alt="Pernas em tratamento de lipedema e flacidez" loading="lazy" width="900" height="1021"><span>Lipedema e flacidez</span></button>
+    <button class="foto surge" data-zoom="img/fotos/hidrohot-resultado.webp"><img src="img/fotos/hidrohot-resultado.webp" alt="Antes e depois do protocolo HidroHot no abdômen" loading="lazy" width="900" height="900"><span>HidroHot</span></button>
+    <button class="foto f-alta surge" data-zoom="img/fotos/lipotika-2.webp"><img src="img/fotos/lipotika-2.webp" alt="Antes e depois do Protocolo LipoTika" loading="lazy" width="880" height="1100"><span>Protocolo LipoTika</span></button>
+    <button class="foto surge" data-zoom="img/fotos/tikaice-2.webp"><img src="img/fotos/tikaice-2.webp" alt="Antes e depois do Método Gelo X com foto autorizada pela paciente" loading="lazy" width="900" height="608"><span>Método Gelo X</span></button>
+  </div>
+  <p class="aviso surge">Fotos enviadas e autorizadas pelas pacientes. Os resultados variam de pessoa para pessoa; por isso todo tratamento começa por uma avaliação.</p>
+</div></section>
 
 <section class="bloco escuro dentro"><div class="wrap">
   <div class="cab-bloco surge"><span class="arco" aria-hidden="true"></span><h2>Por dentro da LEMAHE</h2><p class="lead">Um pouco do dia a dia da clínica. Os vídeos tocam sozinhos, sem som.</p></div>
@@ -96,34 +126,6 @@
     <figure class="reel"><video muted playsinline loop preload="none" poster="video/lipodetox.jpg" data-src="video/lipodetox.mp4"></video><figcaption>LipoDetox</figcaption></figure>
   </div>
 </section>
-
-<section class="bloco resultados"><div class="wrap">
-  <div class="cab-bloco surge"><span class="arco" aria-hidden="true"></span><h2>Resultados de pacientes da clínica</h2><p class="lead">Fotos de pacientes em tratamento com a Dra. Marina, publicadas com autorização.</p></div>
-  <div class="mosaico">
-    <button class="foto f-alta surge" data-zoom="img/fotos/diastase-antes-depois.webp"><img src="img/fotos/diastase-antes-depois.webp" alt="Antes e depois de 3 sessões de tratamento para diástase abdominal" loading="lazy" width="900" height="818"><span>Diástase · 3 sessões</span></button>
-    <button class="foto surge" data-zoom="img/fotos/tikaice-1.webp"><img src="img/fotos/tikaice-1.webp" alt="Antes e depois do Protocolo TikaIce, Método Gelo X, no abdômen" loading="lazy" width="825" height="1100"><span>Método Gelo X · TikaIce</span></button>
-    <button class="foto surge" data-zoom="img/fotos/lipedema-flacidez.webp"><img src="img/fotos/lipedema-flacidez.webp" alt="Pernas em tratamento de lipedema e flacidez" loading="lazy" width="900" height="1021"><span>Lipedema e flacidez</span></button>
-    <button class="foto surge" data-zoom="img/fotos/hidrohot-resultado.webp"><img src="img/fotos/hidrohot-resultado.webp" alt="Antes e depois do protocolo HidroHot no abdômen" loading="lazy" width="900" height="900"><span>HidroHot</span></button>
-    <button class="foto f-alta surge" data-zoom="img/fotos/lipotika-2.webp"><img src="img/fotos/lipotika-2.webp" alt="Antes e depois do Protocolo LipoTika" loading="lazy" width="880" height="1100"><span>Protocolo LipoTika</span></button>
-    <button class="foto surge" data-zoom="img/fotos/tikaice-2.webp"><img src="img/fotos/tikaice-2.webp" alt="Antes e depois do Método Gelo X com foto autorizada pela paciente" loading="lazy" width="900" height="608"><span>Método Gelo X</span></button>
-  </div>
-  <p class="aviso surge">Fotos enviadas e autorizadas pelas pacientes. Os resultados variam de pessoa para pessoa; por isso todo tratamento começa por uma avaliação.</p>
-</div></section>
-
-<section class="bloco claro dra-bloco"><div class="wrap dra">
-  <div class="dra-foto surge">
-    <img src="img/fotos/dra-marina.webp" alt="Dra. Marina Caetano Guirardeli de jaleco, no consultório da Clínica LEMAHE" width="900" height="1198" loading="lazy">
-    <svg class="selo selo-dra" viewBox="0 0 200 200" aria-hidden="true"><defs><path id="circ2" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/></defs><text><textPath href="#circ2" textLength="486" lengthAdjust="spacing">nasci para cuidar · nasci para cuidar ·</textPath></text></svg>
-  </div>
-  <div class="surge">
-    <span class="arco" aria-hidden="true"></span>
-    <h2>Dra. Marina Caetano Guirardeli</h2>
-    <p class="citacao">“Meu paciente não é uma quantidade de sessões. Meu paciente é minha inspiração.”</p>
-    <p>Fisioterapeuta dermatofuncional e cardiorrespiratória, a Dra. Marina também é enfermeira, farmacêutica e esteticista. Foi a primeira profissional habilitada no Método Gelo X em Orlândia e região, e batizou o próprio protocolo: o TikaIce.</p>
-    <ul class="formacao"><li>Fisioterapia dermatofuncional</li><li>Fisioterapia cardiorrespiratória</li><li>Enfermagem</li><li>Farmácia</li><li>Estética</li><li>Método Gelo X</li></ul>
-    <a class="bt leve" href="a-clinica.html">Conhecer a clínica</a>
-  </div>
-</div></section>
 
 <section class="bloco"><div class="wrap">
   <div class="cab-bloco surge"><span class="arco" aria-hidden="true"></span><h2>Como é o seu tratamento</h2></div>
@@ -163,9 +165,9 @@
 </div></footer>
 <div class="barra-cel"><a class="bt" href="agendar.html">Agendar avaliação</a><a class="bt zap-b" href="https://wa.me/5516992884458?text=Ol%C3%A1%2C%20Dra.%20Marina%21%20Vi%20o%20site%20da%20Cl%C3%ADnica%20LEMAHE%20e%20quero%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .2-1.2c-.1-.2-.3-.2-.5-.3z"/></svg></a></div>
 <a class="zap" href="https://wa.me/5516992884458?text=Ol%C3%A1%21%20Vi%20o%20site%20da%20Cl%C3%ADnica%20LEMAHE%20e%20tenho%20uma%20d%C3%BAvida." target="_blank" rel="noopener" aria-label="Falar no WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .2-1.2c-.1-.2-.3-.2-.5-.3z"/></svg></a>
-<script src="js/site.js?v=14" defer></script>
-<script src="js/vivo.js?v=14" defer></script>
-<script src="js/editorial.js?v=14" defer></script>
-<script src="js/agenda.js?v=14" defer></script>
+<script src="js/site.js?v=15" defer></script>
+<script src="js/vivo.js?v=15" defer></script>
+<script src="js/editorial.js?v=15" defer></script><script src="js/tk.js?v=15" defer></script>
+<script src="js/agenda.js?v=15" defer></script>
 </body>
 </html>
