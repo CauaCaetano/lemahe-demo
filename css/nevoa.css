@@ -1,0 +1,92 @@
+/* LEMAHE · abertura em névoa (referência: Montfort). O céu fica parado; as cenas entram e saem com a rolagem. */
+:root { --jost: 'Jost', 'Figtree', system-ui, sans-serif; }
+.nevoa { position: relative; height: 900vh; background: #efe7d9; }
+.nevoa-palco { position: sticky; top: 0; height: 100vh; height: 100svh; overflow: hidden; }
+.nevoa-ceu { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+
+/* o símbolo faz o papel da montanha */
+.nevoa-simbolo { position: absolute; left: 50%; top: 50%; width: min(46vw, 62vh); height: auto; transform: translate(-28%, -56%); opacity: .95; filter: drop-shadow(0 30px 60px rgb(83 99 68 / .18)); pointer-events: none; will-change: transform, opacity;
+  -webkit-mask-image: linear-gradient(180deg, #000 55%, transparent 96%); mask-image: linear-gradient(180deg, #000 55%, transparent 96%); }
+
+/* fotos e vídeos surgem da névoa, com as bordas dissolvidas */
+.nevoa-midia { position: absolute; margin: 0; opacity: 0; pointer-events: none; will-change: transform, opacity; }
+.nevoa-midia img, .nevoa-midia video { width: 100%; height: 100%; object-fit: cover; display: block;
+  -webkit-mask-image: radial-gradient(ellipse 50% 50% at 50% 50%, #000 58%, transparent 100%); mask-image: radial-gradient(ellipse 50% 50% at 50% 50%, #000 58%, transparent 100%); }
+.nm-dra { right: 6vw; top: 12vh; width: min(34vw, 460px); aspect-ratio: 4 / 5; }
+.nm-dra img { object-position: 50% 20%; }
+.nevoa-midia.nm-p1, .nevoa-midia.nm-p2, .nevoa-midia.nm-p3, .nevoa-midia.nm-p4 { right: 8vw; top: 16vh; width: min(36vw, 520px); aspect-ratio: 1; }
+
+/* cenas de texto */
+.cena { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: center; padding: 96px max(24px, calc((100vw - 1200px) / 2)) 64px; opacity: 0; pointer-events: none; will-change: transform, opacity; }
+.cena.ativa { pointer-events: auto; }
+.cena .caixa { font: 300 clamp(1.7rem, 3.4vw, 3rem)/1.2 var(--jost); text-transform: uppercase; letter-spacing: .04em; color: #3d4b31; max-width: 18em; margin: 0 0 26px; text-wrap: balance; }
+.cena .texto-lado { font: 400 1.05rem/1.7 var(--jost); color: #4d4636; max-width: 30em; margin: 0 0 22px; }
+.c1 { align-items: flex-end; text-align: left; } .c1 .caixa, .c1 .texto-lado { width: min(100%, 36em); }
+.c2 { align-items: flex-start; } .c2 .caixa { max-width: 14em; }
+.c7 { align-items: center; text-align: center; } .c7 .caixa { margin-inline: auto; }
+
+/* logotipo grande, como a marca do Montfort */
+.c0 { justify-content: center; }
+.marca-grande { display: flex; align-items: center; flex-wrap: wrap; gap: 0 22px; margin: 0; font: 300 clamp(2rem, 5vw, 3.6rem) var(--jost); letter-spacing: .42em; color: #3d4b31; text-transform: uppercase; }
+.marca-grande img { width: clamp(46px, 5vw, 70px); height: auto; }
+.marca-grande .divisor { width: 1px; height: clamp(40px, 5vw, 66px); background: #8f8a6f; }
+.marca-grande small { flex-basis: 100%; margin-top: 18px; font: 400 .8rem var(--jost); letter-spacing: .3em; color: #6b6450; }
+.rolar { position: absolute; left: max(24px, calc((100vw - 1200px) / 2)); bottom: 32px; margin: 0; font: 400 .75rem var(--jost); letter-spacing: .26em; text-transform: uppercase; color: #6b6450; }
+
+/* pilares numerados em losango */
+.pilar { align-items: flex-start; }
+.losango { display: grid; place-items: center; width: 42px; height: 42px; margin: 0 0 18px 6px; font: 400 .85rem var(--jost); color: #3d4b31; position: relative; }
+.losango::before { content: ''; position: absolute; inset: 4px; border: 1px solid currentColor; transform: rotate(45deg); }
+.pilar-nome { font: 400 .95rem var(--jost); letter-spacing: .08em; color: #5d5642; margin: 0 0 14px; }
+.pilar .caixa { max-width: 13em; }
+
+.link-linha { display: inline-flex; align-items: center; gap: 14px; font: 500 .74rem var(--jost); letter-spacing: .24em; text-transform: uppercase; color: #3d4b31; text-decoration: none; padding-bottom: 10px; border-bottom: 1px solid rgb(61 75 49 / .45); }
+.link-linha i { width: 22px; height: 22px; border-radius: 50%; border: 1px solid currentColor; display: grid; place-items: center; font-style: normal; transition: transform .3s; }
+.link-linha i::before { content: ''; width: 6px; height: 6px; border-top: 1px solid currentColor; border-right: 1px solid currentColor; transform: translateX(-1px) rotate(45deg); }
+.link-linha:hover i { transform: translateX(4px); }
+
+/* no fim o céu escurece: texto claro */
+.nevoa.escuro .cena .caixa, .nevoa.escuro .pilar-nome, .nevoa.escuro .losango, .nevoa.escuro .link-linha { color: #f3eee2; }
+.nevoa.escuro .cena .texto-lado { color: #dfe2d2; }
+.nevoa.escuro .link-linha { border-color: rgb(243 238 226 / .5); }
+
+/* guia de progresso à direita */
+.nevoa-guia { position: absolute; right: 26px; top: 50%; width: 1px; height: 120px; transform: translateY(-50%); background: rgb(61 75 49 / .2); }
+.nevoa-guia span { position: absolute; left: -1px; top: 0; width: 3px; height: 18px; background: #c49a59; }
+
+/* topo transparente sobre a névoa */
+.topo.sobre-nevoa { background: transparent; border-color: transparent; box-shadow: none; backdrop-filter: none; }
+.topo.sobre-nevoa .marca b, .topo.sobre-nevoa .menu a:not(.bt) { color: #3d4b31; }
+.nevoa.escuro ~ * .topo { }
+
+@media (max-width: 860px) {
+  .nevoa-simbolo { width: 62vw; transform: translate(-50%, -96%); }
+  .nm-dra, .nevoa-midia.nm-p1, .nevoa-midia.nm-p2, .nevoa-midia.nm-p3, .nevoa-midia.nm-p4 { right: 50%; top: 84px; width: min(70vw, 300px); }
+  .cena { justify-content: flex-end; padding-bottom: 96px; }
+  .c0 { justify-content: flex-end; padding-bottom: 16vh; }
+  .c1, .c7 { align-items: flex-start; text-align: left; } .c7 .caixa { margin-inline: 0; }
+  .cena .caixa { font-size: clamp(1.35rem, 6vw, 1.8rem); }
+  .cena .texto-lado { font-size: .98rem; }
+  .marca-grande { letter-spacing: .3em; gap: 0 14px; }
+  .nevoa-guia { right: 12px; }
+}
+
+/* movimento reduzido: as cenas viram uma página comum */
+.nevoa.parada { height: auto; }
+.nevoa.parada .nevoa-palco { position: relative; height: auto; overflow: visible; background: #efe7d9; }
+.nevoa.parada .nevoa-ceu, .nevoa.parada .nevoa-midia, .nevoa.parada .nevoa-guia, .nevoa.parada .nevoa-simbolo { display: none; }
+.nevoa.parada .cena { position: relative; inset: auto; opacity: 1 !important; transform: none !important; min-height: 70vh; pointer-events: auto; }
+.nevoa.parada .rolar { display: none; }
+.topo { transition: background .4s, border-color .4s; }
+.topo.sobre-nevoa { background: transparent !important; border-bottom-color: transparent !important; }
+
+/* faixa de próximos horários (abaixo da névoa) */
+.horarios-faixa { background: #fbf7ef; border-bottom: 1px solid var(--linha, #e4d8c4); }
+.horarios-faixa .wrap { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 16px 28px; padding: 22px 0; }
+.hf-tit { margin: 0; font: 400 .8rem var(--jost); letter-spacing: .2em; text-transform: uppercase; color: #3d4b31; }
+.hf-tit small { display: block; margin-top: 4px; letter-spacing: .1em; text-transform: none; font-size: .78rem; color: #6b6450; }
+.horarios-faixa .slots { display: flex; gap: 8px; flex-wrap: wrap; }
+.horarios-faixa .slot { display: grid; text-align: center; min-width: 96px; padding: 8px 12px; border: 1px solid #d9ccb4; border-radius: 12px; background: #fff; color: #5d5642; text-decoration: none; font: 400 .82rem var(--jost); line-height: 1.35; transition: border-color .25s, transform .25s; }
+.horarios-faixa .slot b { font: 500 1.05rem var(--jost); color: #3d4b31; }
+.horarios-faixa .slot:hover { border-color: #536344; transform: translateY(-2px); }
+@media (max-width: 860px) { .horarios-faixa .wrap { grid-template-columns: 1fr; } .horarios-faixa .slots { flex-wrap: nowrap; overflow-x: auto; padding-bottom: 4px; } }
