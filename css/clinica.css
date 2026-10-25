@@ -1,0 +1,100 @@
+/* LEMAHE · estrutura de clínica (referência: West End Physiotherapy). Claro, direto, com o agendamento sempre à mão. */
+:root { --tit: 'Montserrat', 'Figtree', system-ui, sans-serif; --verde: #3f5a3a; --verde-2: #536344; --claro: #f3f5ef; --branco: #fff; }
+body { background: var(--branco); color: #2c3127; }
+h1, h2, h3 { font-family: var(--tit); font-weight: 500; color: var(--verde); letter-spacing: 0; line-height: 1.12; }
+h2 { font-size: clamp(1.8rem, 3.2vw, 2.6rem); text-transform: uppercase; }
+.sub { font: italic 500 .98rem var(--tit); color: var(--dourado); text-transform: uppercase; letter-spacing: .06em; margin: -6px 0 18px; }
+.centro { text-align: center; }
+
+/* aviso no topo e cabeçalho */
+.aviso-topo { background: var(--verde); color: #eef1e6; text-align: center; font: 500 .82rem var(--sans); padding: 7px 16px; }
+.aviso-topo a { color: #fff; background: var(--dourado); border-radius: 4px; padding: 2px 8px; margin-left: 8px; text-decoration: none; font-weight: 600; }
+.topo { background: #fff; border-bottom: 1px solid #e6e9e0; }
+@media (min-width: 861px) {
+  .menu a:not(.bt) { font: 600 .78rem var(--tit); letter-spacing: .06em; text-transform: uppercase; color: var(--verde); }
+  .menu .bt { font: 600 .78rem var(--tit); letter-spacing: .06em; text-transform: uppercase; background: var(--dourado); border-color: var(--dourado); border-radius: 6px; }
+}
+.bt { border-radius: 8px; font-family: var(--tit); font-weight: 600; letter-spacing: .02em; }
+.bt-ouro { background: var(--dourado); border-color: var(--dourado); color: #fff; }
+.bt-ouro:hover { background: #ad8547; border-color: #ad8547; }
+.bt.leve { border-color: var(--verde); color: var(--verde); background: transparent; text-transform: uppercase; font-size: .8rem; letter-spacing: .06em; min-height: 42px; }
+.bt.leve:hover { background: var(--verde); color: #fff; }
+
+/* abertura */
+.heroi { position: relative; min-height: min(78vh, 680px); display: flex; align-items: center; overflow: hidden; background: var(--verde); }
+.heroi-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.heroi::after { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, rgb(32 44 28 / .86) 0%, rgb(32 44 28 / .6) 45%, rgb(32 44 28 / .2) 100%); }
+.heroi-texto { position: relative; z-index: 1; padding: 64px 0 120px; }
+.heroi h1 { color: #fff; text-transform: uppercase; font-size: clamp(2.2rem, 4.6vw, 3.8rem); max-width: 13em; margin: 0 0 16px; }
+.heroi-sub { color: #e8ecdf; font: italic 400 1.08rem var(--tit); max-width: 32em; margin: 0 0 26px; }
+.info-abas { position: relative; z-index: 2; display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: -48px; }
+.info-aba { display: grid; gap: 4px; text-align: center; padding: 18px 16px; border-radius: 8px; background: var(--verde-2); color: #fff; text-decoration: none; box-shadow: 0 16px 30px -18px rgb(30 40 25 / .7); transition: transform .2s; }
+.info-aba.escura { background: var(--verde); }
+.info-aba b { font: 600 .9rem var(--tit); letter-spacing: .08em; text-transform: uppercase; }
+.info-aba span { font-size: .88rem; color: #dfe5d4; }
+.info-aba:hover { transform: translateY(-3px); }
+
+/* como podemos ajudar */
+.ajuda { padding: clamp(64px, 8vw, 110px) 0; }
+.ajuda-grade { display: grid; grid-template-columns: 1.1fr .6fr 1.2fr; gap: clamp(20px, 3vw, 44px); align-items: center; }
+.ajuda-texto p:not(.sub) { color: #4a5142; }
+.ajuda-corpo { width: 100%; max-height: 440px; }
+.ajuda-corpo path, .ajuda-corpo ellipse { fill: #eef1e7; stroke: #8fa07c; stroke-width: 2; }
+.ajuda-pontos circle { fill: var(--verde-2); opacity: .85; animation: ponto 2.4s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+.ajuda-pontos circle:nth-child(2n) { animation-delay: .8s; } .ajuda-pontos circle:nth-child(3n) { animation-delay: 1.6s; }
+@keyframes ponto { 0%, 100% { transform: scale(1); opacity: .85; } 50% { transform: scale(1.35); opacity: .55; } }
+.queixas { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0; }
+.queixa { display: grid; justify-items: center; gap: 8px; padding: 18px 10px; text-align: center; text-decoration: none; color: var(--verde); font: 600 .78rem var(--tit); letter-spacing: .06em; text-transform: uppercase; border-bottom: 1px solid #e3e7dc; transition: background .2s; }
+.queixa:nth-child(odd) { border-right: 1px solid #e3e7dc; }
+.queixa:hover { background: var(--claro); }
+.queixa-ic { width: 46px; height: 46px; color: var(--verde-2); }
+.queixa-ic svg { width: 100%; height: 100%; }
+
+/* animações e tratamentos */
+.padrao { padding: clamp(64px, 8vw, 110px) 0; background: var(--claro); }
+.padrao-cab { text-align: center; margin-bottom: 28px; }
+.padrao-cab .sub { margin-top: 0; }
+.trats { padding: clamp(64px, 8vw, 110px) 0; }
+.trat-grade { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 32px; }
+.trat-card { position: relative; display: grid; grid-template-rows: auto auto 1fr; justify-items: center; text-align: center; gap: 8px; padding: 18px 18px 56px; border: 1px solid #dfe4d6; border-radius: 10px; text-decoration: none; color: inherit; transition: box-shadow .25s, transform .25s; }
+.trat-card img { width: 120px; height: 120px; object-fit: cover; border-radius: 8px; }
+.trat-card h3 { font-size: 1.05rem; font-weight: 600; margin: 8px 0 0; }
+.trat-card p { margin: 0; font-size: .92rem; color: #5a6150; }
+.trat-seta { position: absolute; left: 50%; bottom: -14px; transform: translateX(-50%); width: 34px; height: 30px; border-radius: 6px; background: var(--verde-2); }
+.trat-seta::before { content: ''; position: absolute; left: 11px; top: 11px; width: 8px; height: 8px; border-top: 2px solid #fff; border-right: 2px solid #fff; transform: rotate(45deg); }
+.trat-card:hover { box-shadow: 0 20px 40px -28px rgb(30 40 25 / .6); transform: translateY(-3px); }
+
+/* resultados, no lugar dos depoimentos */
+.resultados-faixa { padding: clamp(64px, 8vw, 110px) 0; background: linear-gradient(135deg, #3f5a3a, #536344 60%, #66774f); color: #fff; }
+.padrao-cab.claro h2 { color: #fff; } .padrao-cab.claro .sub { color: #e6cfa6; }
+.res-grade { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+.res-foto { position: relative; padding: 0; border: 0; border-radius: 10px; overflow: hidden; cursor: zoom-in; aspect-ratio: 4 / 5; background: #2f3f2c; }
+.res-foto img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .6s; }
+.res-foto span { position: absolute; left: 10px; bottom: 10px; font: 600 .78rem var(--tit); background: rgb(255 255 255 / .92); color: var(--verde); padding: 4px 10px; border-radius: 4px; }
+.res-foto:hover img { transform: scale(1.04); }
+.res-aviso { text-align: center; color: #dfe5d4; font-size: .9rem; margin: 22px auto 0; }
+
+/* doutora */
+.dra-faixa { padding: clamp(64px, 8vw, 110px) 0; }
+.dra-grade { display: grid; grid-template-columns: 1.2fr .8fr; gap: clamp(24px, 4vw, 64px); align-items: center; }
+.dra-grade p:not(.sub) { color: #4a5142; max-width: 34em; }
+.dra-retrato { margin: 0; aspect-ratio: 4 / 5; border-radius: 12px; overflow: hidden; }
+.dra-retrato img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 20%; }
+
+.chamada { padding: clamp(48px, 6vw, 80px) 0; background: var(--verde); }
+.chamada h2 { color: #fff; margin-bottom: 18px; }
+
+@media (max-width: 960px) {
+  .ajuda-grade { grid-template-columns: 1fr 1fr; } .ajuda-texto { grid-column: 1 / -1; }
+  .trat-grade { grid-template-columns: repeat(2, 1fr); }
+  .res-grade { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 860px) {
+  .aviso-topo { font-size: .76rem; }
+  .heroi { min-height: 70svh; }
+  .heroi-texto { padding: 48px 0 96px; }
+  .info-abas { grid-template-columns: 1fr; gap: 8px; margin-top: -40px; }
+  .ajuda-grade { grid-template-columns: 1fr; } .ajuda-corpo { display: none; }
+  .trat-grade { grid-template-columns: 1fr; gap: 28px; }
+  .dra-grade { grid-template-columns: 1fr; } .dra-retrato { max-width: 360px; }
+}
