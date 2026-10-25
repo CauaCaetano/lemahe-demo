@@ -62,3 +62,4 @@
   .cena-tela video { animation: none; transform: none; }
   .cena-foco::before, .cena-foco::after { animation: none; }
 }
+.cena-foco { display: none; }
