@@ -1,0 +1,56 @@
+/* LEMAHE · abertura com bolha de vidro (Beauty in Stem) e elipse com cartões flutuando (Truekind). */
+.bolha { position: relative; height: calc(100vh - 72px); height: calc(100svh - 72px); min-height: 540px; overflow: hidden; background: #f6efe3; }
+.bl-cena { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+.bl-conta { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); margin: 0; font: 400 clamp(3rem, 8vw, 6rem) var(--serif); color: var(--oliva-esc); z-index: 3; transition: opacity .6s .2s; font-variant-numeric: tabular-nums; }
+.bolha::after { content: ''; position: absolute; inset: 0; background: #f6efe3; z-index: 2; transition: opacity 1.2s .4s; pointer-events: none; }
+.bolha.pronto::after, .bolha.pronto .bl-conta { opacity: 0; }
+.bl-rotulos { position: absolute; inset: 0; pointer-events: none; z-index: 3; }
+.bl-rotulo { position: absolute; left: 0; top: 0; opacity: 0; pointer-events: none; border: 1px solid rgb(255 255 255 / .9); background: rgb(255 253 248 / .72); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); color: var(--oliva-esc); border-radius: 999px; padding: 6px 13px; font: 500 .78rem var(--sans); white-space: nowrap; cursor: pointer; box-shadow: 0 10px 24px -16px rgb(63 76 51 / .6); transition: opacity .5s, background .2s; }
+.bl-rotulo.mostra { opacity: 1; pointer-events: auto; }
+.bl-rotulo:hover { background: #fff; }
+.bl-texto { position: absolute; left: max(20px, calc((100vw - var(--larg)) / 2)); bottom: clamp(24px, 6vh, 56px); width: min(430px, calc(100% - 40px)); z-index: 3; opacity: 0; transform: translateY(16px); transition: opacity 1s 1.4s, transform 1s 1.4s cubic-bezier(.22, 1, .36, 1); }
+.bolha.pronto .bl-texto { opacity: 1; transform: none; }
+.bl-texto h1 { font-size: clamp(2rem, 3.2vw, 2.9rem); margin: 0 0 10px; }
+.bl-texto p { color: var(--tinta-2); font-size: .98rem; margin: 0 0 18px; }
+.bl-acoes { display: flex; align-items: center; gap: 22px; flex-wrap: wrap; }
+.bl-rolar { position: absolute; right: max(20px, calc((100vw - var(--larg)) / 2)); bottom: clamp(24px, 6vh, 56px); margin: 0; z-index: 3; font: 500 .72rem var(--sans); letter-spacing: .16em; text-transform: uppercase; color: var(--tinta-2); writing-mode: vertical-rl; }
+.bl-rolar::after { content: ''; display: inline-block; width: 1px; height: 40px; margin-top: 12px; background: currentColor; animation: bl-desce 2s infinite; transform-origin: top; }
+@keyframes bl-desce { 0% { transform: scaleY(0); } 50% { transform: scaleY(1); } 100% { transform: scaleY(1); opacity: 0; } }
+.bolha.parada { height: auto; min-height: 0; padding: 56px 0; }
+.bolha.parada .bl-cena, .bolha.parada .bl-conta, .bolha.parada .bl-rolar { display: none; }
+.bolha.parada .bl-texto { position: static; margin: 0 auto; opacity: 1; transform: none; }
+
+/* elipse com a Dra. e cartões de vidro em volta */
+.elipse { padding: clamp(72px, 10vw, 140px) 0; background: linear-gradient(180deg, #f6efe3, var(--papel)); overflow: hidden; }
+.elipse-grade { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: clamp(24px, 4vw, 64px); align-items: center; }
+.el-texto h2 { max-width: 11em; }
+.el-texto p { color: var(--tinta-2); max-width: 28em; margin-bottom: 24px; }
+.el-palco { position: relative; aspect-ratio: 1; max-width: 640px; width: 100%; justify-self: center; }
+.el-oval { position: absolute; left: 22%; top: 6%; width: 56%; height: 88%; margin: 0; border-radius: 50%; overflow: hidden; transform: rotate(-16deg); box-shadow: 0 50px 80px -50px rgb(63 76 51 / .6); background: var(--creme); }
+.el-oval img { position: absolute; left: -20%; top: -8%; width: 140%; height: 116%; object-fit: cover; object-position: 50% 18%; transform: rotate(16deg); }
+.el-fita { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 1; pointer-events: none; overflow: visible; }
+.el-fita path { fill: none; stroke: var(--dourado); stroke-width: 14; stroke-linecap: round; opacity: .85; stroke-dasharray: 900; stroke-dashoffset: 900; transition: stroke-dashoffset 2.4s cubic-bezier(.65, 0, .35, 1); }
+.elipse.visto .el-fita path { stroke-dashoffset: 0; }
+.el-cartao { position: absolute; z-index: 2; width: min(200px, 42%); padding: 16px 16px 14px; border-radius: 18px; background: rgb(255 253 248 / .72); backdrop-filter: blur(14px) saturate(1.3); -webkit-backdrop-filter: blur(14px) saturate(1.3); border: 1px solid rgb(255 255 255 / .9); box-shadow: 0 24px 40px -28px rgb(63 76 51 / .55), inset 0 1px 0 #fff; display: grid; gap: 4px; will-change: transform; }
+.el-cartao b { font: 500 1.15rem/1.15 var(--serif); color: var(--oliva-esc); }
+.el-cartao small { font-size: .8rem; color: var(--tinta-2); line-height: 1.4; }
+.el-ic { width: 38px; height: 38px; border-radius: 50%; display: grid; place-items: center; color: var(--marrom); background: #fff; border: 1px solid var(--linha); margin-bottom: 6px; }
+.el-ic svg { width: 20px; height: 20px; }
+.c1 { left: 0; top: 10%; } .c2 { right: 0; top: 2%; } .c3 { left: 4%; bottom: 8%; } .c4 { right: 2%; bottom: 16%; }
+.el-folha { position: absolute; z-index: 1; width: 46px; height: 46px; border-radius: 0 100% 0 100%; background: linear-gradient(135deg, #a3ad84, #6f7f55); will-change: transform; }
+.el-folha.f1 { left: 10%; top: 46%; transform: rotate(20deg); } .el-folha.f2 { right: 14%; top: 44%; width: 34px; height: 34px; background: linear-gradient(135deg, #e6cfa6, #c49a59); } .el-folha.f3 { left: 46%; bottom: 0; width: 28px; height: 28px; }
+@media (max-width: 860px) {
+  .bolha { height: calc(100svh - 64px); }
+  .bl-texto h1 { font-size: 1.85rem; }
+  .bl-rolar { display: none; }
+  .elipse-grade { grid-template-columns: 1fr; }
+  .el-palco { max-width: 440px; }
+  .el-cartao { width: 46%; padding: 12px; } .el-cartao b { font-size: 1rem; } .el-cartao small { display: none; }
+  .el-ic { width: 32px; height: 32px; }
+}
+.bolha .bl-texto::before { content: ''; position: absolute; inset: -40px -60px -40px -60px; z-index: -1; background: radial-gradient(ellipse at 30% 60%, rgb(246 239 227 / .92) 30%, rgb(246 239 227 / 0) 72%); }
+@media (max-width: 860px) {
+  .el-cartao { width: 38%; padding: 10px; gap: 2px; } .el-cartao b { font-size: .92rem; }
+  .c1 { left: -2%; top: 4%; } .c2 { right: -2%; top: 0; } .c3 { left: -2%; bottom: 2%; } .c4 { right: -2%; bottom: 6%; }
+  .el-ic { width: 28px; height: 28px; margin-bottom: 2px; } .el-ic svg { width: 16px; height: 16px; }
+}

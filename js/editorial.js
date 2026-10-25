@@ -58,4 +58,12 @@
     var desloca = function () { var r = mg.getBoundingClientRect(), t = limite((innerHeight - r.top) / (innerHeight + r.height)); vg.style.transform = 'translateY(' + (-t * 15).toFixed(2) + '%)'; if (t > 0 && t < 1) toca(vg); else if (!vg.paused) vg.pause(); };
     addEventListener('scroll', desloca, { passive: true }); desloca();
   }
+
+  // elipse: os cartões e as folhas flutuam em velocidades diferentes; a fita dourada se desenha ao aparecer
+  var el = $('.elipse');
+  if (el) {
+    var soltos = $$('[data-vel]', el);
+    if ('IntersectionObserver' in window) new IntersectionObserver(function (es) { if (es[0].isIntersecting) el.classList.add('visto'); }, { threshold: .25 }).observe(el); else el.classList.add('visto');
+    if (!calmo) { var flutua = function () { var r = el.getBoundingClientRect(), d = (r.top + r.height / 2) - innerHeight / 2; soltos.forEach(function (s) { s.style.translate = '0 ' + (d * +s.dataset.vel).toFixed(1) + 'px'; }); }; addEventListener('scroll', flutua, { passive: true }); flutua(); }
+  }
 })();
