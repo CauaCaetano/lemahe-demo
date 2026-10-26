@@ -102,8 +102,8 @@ h2 { font-size: clamp(1.8rem, 3.2vw, 2.6rem); text-transform: uppercase; }
 @media (max-width: 860px) {
   .aviso-topo { font-size: .76rem; }
   .heroi { min-height: 70svh; }
-  .heroi-texto { padding: 48px 0 96px; }
-  .info-abas { grid-template-columns: 1fr; gap: 8px; margin-top: -40px; }
+  .heroi-texto { padding: 48px 0 56px; }
+  .info-abas { grid-template-columns: 1fr; gap: 8px; margin-top: 16px; }
   .ajuda-grade { grid-template-columns: 1fr; } .ajuda-corpo { display: none; }
   .trat-grade, .trat-grade.quatro { grid-template-columns: 1fr; gap: 28px; }
   .dra-retrato { margin-inline: auto; width: 100%; }
