@@ -14,7 +14,7 @@
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,400;0,500;0,600;1,400&family=Marcellus&family=Montserrat:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/site.css?v=23"><link rel="stylesheet" href="css/vivo.css?v=23"><link rel="stylesheet" href="css/editorial.css?v=23"><link rel="stylesheet" href="css/agenda.css?v=23"><link rel="stylesheet" href="css/anima.css?v=23"><link rel="stylesheet" href="css/clinica.css?v=23">
+<link rel="stylesheet" href="css/site.css?v=24"><link rel="stylesheet" href="css/vivo.css?v=24"><link rel="stylesheet" href="css/editorial.css?v=24"><link rel="stylesheet" href="css/agenda.css?v=24"><link rel="stylesheet" href="css/anima.css?v=24"><link rel="stylesheet" href="css/clinica.css?v=24">
 
 </head>
 <body>
@@ -26,12 +26,13 @@
   <nav class="menu" id="menu" aria-label="Principal"><a href="index.html">Início</a><a href="tratamentos.html">Tratamentos</a><a href="a-clinica.html">A clínica</a><a class="bt" href="agendar.html" aria-current="page">Agendar avaliação</a></nav>
 </div></header>
 <main id="conteudo">
-<header class="cab-pagina">
+<section class="pagina-topo">
   <div class="wrap">
+    <p class="sub">Agenda</p>
     <h1>Agendar avaliação</h1>
-    <p class="lead">Escolha um horário livre. A clínica confirma o agendamento pelo WhatsApp. Para atendimento domiciliar, escolha o horário e informe o endereço na observação.</p>
+    <p class="pagina-lead">Escolha um horário livre. A clínica confirma o agendamento pelo WhatsApp. Para atendimento domiciliar, escolha o horário e informe o endereço na observação.</p>
   </div>
-</header>
+</section>
 
 <section class="secao" style="padding-top:clamp(36px,5vw,64px)" id="agenda" data-google="">
   <div class="wrap">
@@ -75,6 +76,39 @@
   </div>
 </section>
 
+<section class="padrao" id="pacote"><div class="wrap">
+  <div class="padrao-cab"><h2>Monte o seu pacote</h2><p class="sub">Escolha os tratamentos e receba o orçamento no WhatsApp.</p></div>
+  <form class="pacote" data-pacote novalidate>
+    <div class="pacote-itens">
+      <label class="pacote-item"><input type="checkbox" value="Diástase abdominal"><span>Diástase abdominal</span></label>
+      <label class="pacote-item"><input type="checkbox" value="Gordura localizada (Método Gelo X)"><span>Gordura localizada (Gelo X)</span></label>
+      <label class="pacote-item"><input type="checkbox" value="Lipedema e drenagem linfática"><span>Lipedema e drenagem</span></label>
+      <label class="pacote-item"><input type="checkbox" value="Flacidez e contorno corporal"><span>Flacidez e contorno</span></label>
+      <label class="pacote-item"><input type="checkbox" value="LipoDetox"><span>LipoDetox</span></label>
+      <label class="pacote-item"><input type="checkbox" value="Dor e reabilitação"><span>Dor e reabilitação</span></label>
+      <label class="pacote-item"><input type="checkbox" value="Terapia capilar com laser"><span>Terapia capilar</span></label>
+      <label class="pacote-item"><input type="checkbox" value="Auriculoterapia, ventosaterapia e massagem"><span>Terapia integrativa</span></label>
+      <label class="pacote-item"><input type="checkbox" value="Fisioterapia respiratória"><span>Fisioterapia respiratória</span></label>
+    </div>
+    <div class="pacote-opcoes">
+      <fieldset><legend>Quantidade de sessões</legend>
+        <label><input type="radio" name="sessoes" value="sessão avulsa" checked> Avulsa</label>
+        <label><input type="radio" name="sessoes" value="pacote de 5 sessões"> 5 sessões</label>
+        <label><input type="radio" name="sessoes" value="pacote de 10 sessões"> 10 sessões</label>
+      </fieldset>
+      <fieldset><legend>Onde</legend>
+        <label><input type="radio" name="local" value="na clínica" checked> Na clínica</label>
+        <label><input type="radio" name="local" value="em casa (atendimento domiciliar)"> Em casa</label>
+      </fieldset>
+    </div>
+    <div class="pacote-resumo" aria-live="polite">
+      <p data-pacote-resumo>Escolha pelo menos um tratamento.</p>
+      <p class="erro" data-pacote-erro role="alert"></p>
+      <button class="bt bt-ouro" type="submit"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .2-1.2c-.1-.2-.3-.2-.5-.3z"/></svg>Pedir orçamento no WhatsApp</button>
+      <p class="miudo">O valor é confirmado pela clínica. A quantidade de sessões é ajustada na avaliação, conforme o seu caso.</p>
+    </div>
+  </form>
+</div></section>
 <section class="secao clara">
   <div class="wrap">
     <div class="secao-cab"><h2>Como a clínica controla a agenda</h2><p>A agenda é feita na Agenda Google da clínica, sem custo. O site mostra apenas os horários que a Dra. Marina abrir.</p></div>
@@ -96,9 +130,10 @@
 </div></footer>
 <div class="barra-cel"><a class="bt" href="agendar.html">Agendar avaliação</a><a class="bt zap-b" href="https://wa.me/5516992884458?text=Ol%C3%A1%2C%20Dra.%20Marina%21%20Vi%20o%20site%20da%20Cl%C3%ADnica%20LEMAHE%20e%20quero%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .2-1.2c-.1-.2-.3-.2-.5-.3z"/></svg></a></div>
 <a class="zap" href="https://wa.me/5516992884458?text=Ol%C3%A1%21%20Vi%20o%20site%20da%20Cl%C3%ADnica%20LEMAHE%20e%20tenho%20uma%20d%C3%BAvida." target="_blank" rel="noopener" aria-label="Falar no WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .2-1.2c-.1-.2-.3-.2-.5-.3z"/></svg></a>
-<script src="js/site.js?v=23" defer></script>
-<script src="js/vivo.js?v=23" defer></script>
-<script src="js/editorial.js?v=23" defer></script><script src="js/anima.js?v=23" defer></script>
-<script src="js/agenda.js?v=23" defer></script>
+<script src="js/site.js?v=24" defer></script>
+<script src="js/vivo.js?v=24" defer></script>
+<script src="js/editorial.js?v=24" defer></script><script src="js/anima.js?v=24" defer></script>
+<script src="js/agenda.js?v=24" defer></script>
+<script src="js/pacote.js?v=24" defer></script>
 </body>
 </html>
