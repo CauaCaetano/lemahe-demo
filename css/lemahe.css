@@ -84,6 +84,8 @@ button { font: inherit; color: inherit; }
 .mc-sub { display: grid; padding: 6px 0 12px 12px; }
 .mc-sub a { padding: 9px 0; text-decoration: none; font-size: 16px; border-bottom: 1px solid var(--linha); }
 .menu-cel .pilula { margin-top: 22px; }
+.menu-cel > a.pilula { font: 600 12.5px/1.2 var(--cx); padding: 0 28px; border-bottom: 1px solid var(--acc); }
+.menu-cel > a.pilula + a.pilula { margin-top: 10px; }
 
 /* ---------- abertura (início) ---------- */
 .heroi { position: relative; display: grid; grid-template-columns: 45% 1fr; align-items: center; min-height: min(100vh, 960px); background: var(--branco); }
