@@ -13,121 +13,192 @@
 <link rel="icon" href="favicon.ico" sizes="any"><link rel="icon" type="image/png" sizes="192x192" href="img/icone-192.png"><link rel="apple-touch-icon" href="img/icone-180.png">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Marcellus&family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/lemahe.css?v=31"><link rel="stylesheet" href="css/paginas.css?v=31">
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/estilo.css?v=40">
+<link rel="stylesheet" href="css/paginas.css?v=40">
+<link rel="stylesheet" href="css/tema.css?v=40">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "A clínica atende em casa?", "acceptedAnswer": {"@type": "Answer", "text": "Sim. A Dra. Marina faz fisioterapia domiciliar, conforme a avaliação da necessidade e a disponibilidade de agenda."}}, {"@type": "Question", "name": "Quais cidades são atendidas?", "acceptedAnswer": {"@type": "Answer", "text": "A referência é Orlândia (SP). Consulte a disponibilidade para Morro Agudo, Sales Oliveira, Nuporanga e São Joaquim da Barra."}}, {"@type": "Question", "name": "Como é a primeira visita?", "acceptedAnswer": {"@type": "Answer", "text": "Primeiro conversamos sobre a sua necessidade. A avaliação considera o histórico, a funcionalidade e o ambiente da casa."}}, {"@type": "Question", "name": "Preciso ter equipamentos em casa?", "acceptedAnswer": {"@type": "Answer", "text": "Não necessariamente. Os recursos dependem do planejamento, e a profissional orienta antes sobre o que for preciso."}}]}</script>
-<script src="js/lemahe.js?v=31" defer></script>
+<script src="js/site.js?v=40" defer></script>
 </head>
-<body>
+<body data-zap="5516992884458">
 <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
 <svg class="simbolos" aria-hidden="true" focusable="false">
-<symbol id="i-seta" viewBox="0 0 40 16"><path d="M2 8h33m-6-5 6 5-6 5"/></symbol>
-<symbol id="i-check" viewBox="0 0 30 30"><circle cx="13" cy="16" r="10"/><path d="m8 16 4 4 14-16"/></symbol>
-<symbol id="i-insta" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r=".6"/></symbol>
-<symbol id="i-wa" viewBox="0 0 24 24"><path d="M4 20l1.2-4A8 8 0 1 1 8 18.8Z"/><path d="M9 8.5c0 3 2.5 6 6 6.5l1-1.6-2-1-1 .8c-1-.4-2-1.4-2.4-2.4l.8-1-1-2Z"/></symbol>
-<symbol id="i-mapa" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
-<symbol id="i-folha" viewBox="0 0 48 48"><path d="M10 40C8 24 18 10 40 8c1 20-10 32-30 32Z"/><path d="M10 40C18 30 24 24 32 17"/></symbol>
-<symbol id="i-pessoa" viewBox="0 0 48 48"><circle cx="24" cy="15" r="7"/><path d="M10 41c1-9 7-14 14-14s13 5 14 14"/><path d="M33 9c4 1 6 4 6 8" /></symbol>
-<symbol id="i-diploma" viewBox="0 0 48 48"><path d="M4 18 24 9l20 9-20 9Z"/><path d="M12 22v9c0 3 6 6 12 6s12-3 12-6v-9"/><path d="M44 18v11"/></symbol>
-<symbol id="i-casa" viewBox="0 0 48 48"><path d="M6 22 24 7l18 15"/><path d="M11 18v22h26V18"/><path d="M20 40V29h8v11"/></symbol>
-<symbol id="i-abdomen" viewBox="0 0 48 48"><path d="M15 6c-2 8-3 14-2 21s3 11 4 15m16-36c2 8 3 14 2 21s-3 11-4 15"/><path d="M24 12v26"/><path d="M17 18h14M17 25h14M18 32h12"/><circle cx="24" cy="36" r="1.2"/></symbol>
-<symbol id="i-floco" viewBox="0 0 48 48"><path d="M24 5v38M7.5 14.5l33 19M7.5 33.5l33-19"/><path d="m19 8 5 4 5-4M19 40l5-4 5 4M6 21l6 2-1 6M42 27l-6-2 1-6M6 27l6-2-1-6M42 21l-6 2 1 6"/></symbol>
-<symbol id="i-gota" viewBox="0 0 48 48"><path d="M24 5s-13 15-13 25a13 13 0 0 0 26 0C37 20 24 5 24 5Z"/><path d="M18 31a6 6 0 0 0 6 6"/></symbol>
-<symbol id="i-joelho" viewBox="0 0 48 48"><path d="M16 4c1 9 2 15 6 19s4 9 1 21m10-40c-1 8-1 13-4 17"/><circle cx="25" cy="24" r="6"/><path d="M36 15l5-3M37 22h6M36 29l5 3"/></symbol>
-<symbol id="i-cabelo" viewBox="0 0 48 48"><path d="M12 30c-2-14 4-24 12-24s14 10 12 24"/><path d="M16 30c0-10 3-16 8-18m4 0c3 3 5 9 4 18"/><path d="M12 30c2 6 7 10 12 10s10-4 12-10"/><path d="M24 2v4"/></symbol>
-<symbol id="i-orelha" viewBox="0 0 48 48"><path d="M16 18a10 10 0 0 1 20 0c0 7-6 9-7 14s-3 10-9 10c-4 0-6-3-6-6"/><path d="M21 19a5 5 0 0 1 10 0c0 4-4 5-4 8"/><circle cx="32" cy="12" r="1.3"/><circle cx="34" cy="22" r="1.3"/><circle cx="24" cy="33" r="1.3"/></symbol>
-<symbol id="i-ventosa" viewBox="0 0 48 48"><path d="M14 30c0-8 4-14 10-14s10 6 10 14Z"/><path d="M20 16v-6h8v6"/><path d="M8 34h32"/><path d="M12 40c4-2 8-2 12 0s8 2 12 0"/></symbol>
-<symbol id="i-laser" viewBox="0 0 48 48"><rect x="17" y="4" width="14" height="22" rx="3"/><path d="M20 26v4h8v-4"/><path d="M24 30v6M18 40l-3 4M30 40l3 4M24 38v6"/></symbol>
-<symbol id="i-corpo" viewBox="0 0 48 48"><path d="M17 6c-3 7-4 13-2 19 1 5 0 10-2 17m18-36c3 7 4 13 2 19-1 5 0 10 2 17"/><path d="M15 25c6 2 12 2 18 0"/><path d="M18 14c4 1 8 1 12 0"/></symbol>
-<symbol id="i-movimento" viewBox="0 0 48 48"><circle cx="28" cy="8" r="4"/><path d="M14 22l8-8 6 4 6 8"/><path d="M22 14l-2 14 8 6 2 10M20 28l-8 14"/></symbol>
-<symbol id="i-coracao" viewBox="0 0 48 48"><path d="M24 40S7 30 7 18a9 9 0 0 1 17-4 9 9 0 0 1 17 4c0 12-17 22-17 22Z"/><path d="M12 24h8l3-5 4 9 3-4h6"/></symbol>
+  <symbol id="i-floreio" viewBox="0 0 60 60"><path d="M6 56V30C6 16 14 8 28 6m0 0c6-1 12 0 14 4 2 5-5 8-8 4-2-3 1-6 4-5M6 30c0-5 3-8 7-7 4 1 3 7-1 7-3 0-3-4 0-4m-6 12c2-3 6-3 7 0 1 4-4 5-5 2"/><circle cx="20" cy="9" r="2"/><path d="M14 16c3-1 5 1 4 3"/></symbol>
+  <symbol id="i-seta" viewBox="0 0 40 16"><path d="M2 8h33m-6-5 6 5-6 5"/></symbol>
+  <symbol id="i-check" viewBox="0 0 30 30"><circle cx="13" cy="16" r="10"/><path d="m8 16 4 4 14-16"/></symbol>
+  <symbol id="i-x" viewBox="0 0 30 30"><circle cx="15" cy="15" r="11"/><path d="m10 10 10 10M20 10 10 20"/></symbol>
+  <symbol id="i-insta" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r=".6"/></symbol>
+  <symbol id="i-wa" viewBox="0 0 24 24"><path d="M4 20l1.2-4A8 8 0 1 1 8 18.8Z"/><path d="M9 8.5c0 3 2.5 6 6 6.5l1-1.6-2-1-1 .8c-1-.4-2-1.4-2.4-2.4l.8-1-1-2Z"/></symbol>
+  <symbol id="i-pacote" viewBox="0 0 24 24"><rect x="3" y="9" width="18" height="4"/><path d="M5 13v8h14v-8M12 9v12M12 9C9 9 7 7.5 8 6s4 0 4 3c0-3 3-4.5 4-3s-1 3-4 3"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 22s7-7 7-12a7 7 0 0 0-14 0c0 5 7 12 7 12Z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+  <symbol id="i-folha" viewBox="0 0 40 40"><path d="M20 36C9 30 8 15 15 4c6 9 9 21 5 32Z" fill="#c9d0b6" stroke="none"/><path d="M20 36c8-3 15-10 16-20-8 1-14 8-16 20Z" fill="#a3ad8c" stroke="none"/><path d="M20 36C17 25 16 14 15 6" stroke="#788568"/></symbol>
+  <symbol id="i-pessoa" viewBox="0 0 48 48"><circle cx="24" cy="15" r="7"/><path d="M10 41c1-9 7-14 14-14s13 5 14 14"/><path d="M33 9c4 1 6 4 6 8"/></symbol>
+  <symbol id="i-diploma" viewBox="0 0 48 48"><path d="M4 18 24 9l20 9-20 9Z"/><path d="M12 22v9c0 3 6 6 12 6s12-3 12-6v-9"/><path d="M44 18v11"/></symbol>
+  <symbol id="i-casa" viewBox="0 0 48 48"><path d="M6 22 24 7l18 15"/><path d="M11 18v22h26V18"/><path d="M20 40V29h8v11"/></symbol>
+  <symbol id="i-abdomen" viewBox="0 0 48 48"><path d="M15 6c-2 8-3 14-2 21s3 11 4 15m16-36c2 8 3 14 2 21s-3 11-4 15"/><path d="M24 12v26"/><path d="M17 18h14M17 25h14M18 32h12"/></symbol>
+  <symbol id="i-floco" viewBox="0 0 48 48"><path d="M24 5v38M7.5 14.5l33 19M7.5 33.5l33-19"/><path d="m19 8 5 4 5-4M19 40l5-4 5 4"/></symbol>
+  <symbol id="i-gota" viewBox="0 0 48 48"><path d="M24 5s-13 15-13 25a13 13 0 0 0 26 0C37 20 24 5 24 5Z"/><path d="M18 31a6 6 0 0 0 6 6"/></symbol>
+  <symbol id="i-joelho" viewBox="0 0 48 48"><path d="M16 4c1 9 2 15 6 19s4 9 1 21m10-40c-1 8-1 13-4 17"/><circle cx="25" cy="24" r="6"/><path d="M36 15l5-3M37 22h6M36 29l5 3"/></symbol>
+  <symbol id="i-cabelo" viewBox="0 0 48 48"><path d="M12 30c-2-14 4-24 12-24s14 10 12 24"/><path d="M16 30c0-10 3-16 8-18m4 0c3 3 5 9 4 18"/><path d="M12 30c2 6 7 10 12 10s10-4 12-10"/></symbol>
+  <symbol id="i-orelha" viewBox="0 0 48 48"><path d="M16 18a10 10 0 0 1 20 0c0 7-6 9-7 14s-3 10-9 10c-4 0-6-3-6-6"/><path d="M21 19a5 5 0 0 1 10 0c0 4-4 5-4 8"/><circle cx="32" cy="12" r="1.3"/><circle cx="34" cy="22" r="1.3"/></symbol>
+  <symbol id="i-ventosa" viewBox="0 0 48 48"><path d="M14 30c0-8 4-14 10-14s10 6 10 14Z"/><path d="M20 16v-6h8v6"/><path d="M8 34h32"/><path d="M12 40c4-2 8-2 12 0s8 2 12 0"/></symbol>
+  <symbol id="i-laser" viewBox="0 0 48 48"><rect x="17" y="4" width="14" height="22" rx="3"/><path d="M20 26v4h8v-4"/><path d="M24 30v6M18 40l-3 4M30 40l3 4M24 38v6"/></symbol>
+  <symbol id="i-corpo" viewBox="0 0 48 48"><path d="M17 6c-3 7-4 13-2 19 1 5 0 10-2 17m18-36c3 7 4 13 2 19-1 5 0 10 2 17"/><path d="M15 25c6 2 12 2 18 0"/></symbol>
+  <symbol id="i-movimento" viewBox="0 0 48 48"><circle cx="28" cy="8" r="4"/><path d="M14 22l8-8 6 4 6 8"/><path d="M22 14l-2 14 8 6 2 10M20 28l-8 14"/></symbol>
+  <symbol id="i-relogio" viewBox="0 0 48 48"><circle cx="24" cy="26" r="16"/><path d="M24 16v10l7 5M12 10l-4-4M36 10l4-4"/></symbol>
 </svg>
-<header class="topo">
-  <a class="marca" href="index.html" aria-label="Clínica LEMAHE, página inicial"><img src="img/simbolo.webp" alt="" width="49" height="54"><img src="img/nome.webp" alt="LEMAHE" width="187" height="30"></a>
+
+<header class="topo" id="topo">
+  <a class="marca" href="index.html" aria-label="Clínica LEMAHE, início"><img class="m-simbolo" src="img/simbolo.webp" alt="" width="54" height="60"><img class="m-nome" src="img/nome.webp" alt="LEMAHE" width="199" height="32"></a>
   <nav class="menu" aria-label="Principal">
-    <div class="dd"><button class="dd-bt" type="button" aria-expanded="false" aria-controls="dd-trat" style="color:var(--oliva)">Tratamentos</button><div class="dd-painel" id="dd-trat"><div class="dd-cols"><div><p class="olho">Fisioterapia</p><a href="tratamento-diastase-abdominal.html">Diástase abdominal</a><a href="tratamento-laser-joelho.html">Laser para artrose e joelho</a></div><div><p class="olho">Estética avançada</p><a href="tratamento-metodo-gelo-x.html">Método Gelo X</a><a href="tratamento-drenagem-linfatica.html">Drenagem linfática manual</a><a href="tratamento-terapia-capilar.html">Terapia capilar com laser</a></div><div><p class="olho">Terapia integrativa</p><a href="tratamento-auriculoterapia.html">Auriculoterapia</a><a href="tratamento-ventosaterapia.html">Ventosaterapia</a><p class="olho" style="margin-top:18px">Em casa</p><a href="tratamento-fisioterapia-domiciliar.html">Fisioterapia domiciliar</a><a href="tratamentos.html">Todos os tratamentos</a></div><figure class="dd-foto"><img src="img/site/sala-900.webp" alt="" width="130" height="160" loading="lazy"><figcaption>Cada plano começa por uma avaliação individual.</figcaption></figure></div></div></div>
-    <a href="a-clinica.html">A clínica</a><a href="pacotes.html">Pacotes</a><a href="duvidas.html">Dúvidas</a><a href="contato.html">Contato</a>
-  </nav>
-  <a class="pilula topo-bt topo-wa" href="https://wa.me/5516992884458?text=Ol%C3%A1%21%20Vi%20o%20site%20da%20Cl%C3%ADnica%20LEMAHE%20e%20tenho%20uma%20d%C3%BAvida." target="_blank" rel="noopener">WhatsApp</a>
-  <a class="pilula pilula-cheia topo-bt topo-ag" href="agendar.html">Agendar</a>
-  <button class="hamb" type="button" aria-label="Abrir o menu" aria-expanded="false" aria-controls="menu-cel"><span></span><span></span><span></span></button>
-</header>
-<nav class="menu-cel" id="menu-cel" aria-label="Menu do celular" hidden>
-  <a href="index.html">Início</a><details><summary>Fisioterapia</summary><div class="mc-sub"><a href="tratamento-diastase-abdominal.html">Diástase abdominal</a><a href="tratamento-laser-joelho.html">Laser para artrose e joelho</a></div></details><details><summary>Estética avançada</summary><div class="mc-sub"><a href="tratamento-metodo-gelo-x.html">Método Gelo X</a><a href="tratamento-drenagem-linfatica.html">Drenagem linfática manual</a><a href="tratamento-terapia-capilar.html">Terapia capilar com laser</a></div></details><details><summary>Terapia integrativa</summary><div class="mc-sub"><a href="tratamento-auriculoterapia.html">Auriculoterapia</a><a href="tratamento-ventosaterapia.html">Ventosaterapia</a></div></details><details><summary>Em casa</summary><div class="mc-sub"><a href="tratamento-fisioterapia-domiciliar.html">Fisioterapia domiciliar</a></div></details><a href="tratamentos.html">Todos os tratamentos</a><a href="a-clinica.html">A clínica</a><a href="pacotes.html">Monte o seu pacote</a><a href="duvidas.html">Dúvidas</a><a href="contato.html">Contato</a>
-  <a class="pilula pilula-cheia" href="agendar.html">Agendar avaliação</a><a class="pilula" href="https://wa.me/5516992884458?text=Ol%C3%A1%21%20Vi%20o%20site%20da%20Cl%C3%ADnica%20LEMAHE%20e%20tenho%20uma%20d%C3%BAvida." target="_blank" rel="noopener">Falar no WhatsApp</a>
-</nav>
-<main id="conteudo">
-<section class="pg-topo" aria-labelledby="h-t">
-  <div class="pg-media"><img src="img/site/p-fisio-1600.webp" srcset="img/site/p-fisio-900.webp 900w, img/site/p-fisio-1600.webp 1600w" sizes="(max-width: 960px) 100vw, 42vw" alt="Fisioterapia domiciliar na Clínica LEMAHE (imagem ilustrativa)" width="1280" height="900"><span class="ilustra">Imagem ilustrativa</span></div>
-  <div class="pg-txt">
-    <p class="trilha"><a href="index.html">Início</a><span>/</span><a href="tratamentos.html">Tratamentos</a><span>/</span>Fisioterapia domiciliar</p>
-    <p class="olho">Em casa · Orlândia</p>
-    <h1 id="h-t">Fisioterapia domiciliar</h1>
-    <p class="pg-sub">Atendimento fisioterapêutico na sua casa, com atenção à sua rotina, ao seu ambiente e às suas condições de saúde.</p>
-    <div class="bts"><a class="pilula pilula-cheia" href="agendar.html?t=fisioterapia-domiciliar">Agendar avaliação</a><a class="pilula" href="https://wa.me/5516992884458?text=Ol%C3%A1%21%20Vi%20no%20site%20da%20Cl%C3%ADnica%20LEMAHE%20e%20tenho%20uma%20d%C3%BAvida%20sobre%20fisioterapia%20domiciliar." target="_blank" rel="noopener">Tirar dúvida no WhatsApp</a></div>
-    <dl class="ficha"><div><dt>Área</dt><dd>Em casa</dd></div><div><dt>Onde</dt><dd>Em casa</dd></div><div><dt>Primeiro passo</dt><dd>Avaliação individual</dd></div></dl>
-  </div>
-</section>
-
-<section class="sec sec-creme" aria-labelledby="oq-t">
-  <div class="tr-sobre">
-    <figure class="tr-foto anima"><video data-auto muted loop playsinline preload="metadata" poster="img/site/p-fisio-900.webp" aria-label="Vídeo: fisioterapia domiciliar"><source src="video/proc/fisio.mp4" type="video/mp4"></video><span class="ilustra">Imagem ilustrativa</span></figure>
-    <div>
-      <p class="olho">O tratamento</p>
-      <h2 id="oq-t" class="caixa">O cuidado pode chegar até você</h2>
-      <p>A fisioterapia domiciliar é o atendimento feito na casa do paciente. O acompanhamento acontece no ambiente em que a pessoa vive, considerando a rotina, a mobilidade e as necessidades do dia a dia. Exercícios e recursos são definidos depois da avaliação individual.</p>
-      <ul class="lista-ic"><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Atendimento feito pela Dra. Marina, fisioterapeuta (CREFITO-3 216312-F)</span></li><li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span>Plano definido na avaliação, sem número de sessões prometido</span></li></ul>
+    <div class="dd"><button type="button" class="dd-bt" aria-expanded="false" aria-controls="dd-1">O que tratamos</button>
+      <div class="dd-painel" id="dd-1"><div class="dd-cols"><div><p class="olho">Corpo</p><a href="tratamento-diastase-abdominal.html">Barriga que estufa (diástase)</a><a href="tratamento-metodo-gelo-x.html">Gordura localizada</a><a href="tratamento-drenagem-linfatica.html">Pernas inchadas</a><a href="tratamento-laser-joelho.html">Dor no joelho</a></div><div><p class="olho">Bem-estar</p><a href="tratamento-terapia-capilar.html">Queda e fios finos</a><a href="tratamento-ventosaterapia.html">Tensão nas costas</a><a href="tratamento-auriculoterapia.html">Cuidado integrativo</a><a href="tratamento-fisioterapia-domiciliar.html">Não consigo ir à clínica</a></div><figure class="dd-foto"><img src="img/banco/massagem-900.webp" alt="Mãos de terapeuta em atendimento" width="900" height="600" loading="lazy"><figcaption>Cada queixa leva à página do tratamento, com indicação e cuidados.</figcaption></figure></div></div>
     </div>
-  </div>
-</section>
+    <div class="dd"><button type="button" class="dd-bt" aria-expanded="false" aria-controls="dd-2">Tratamentos</button>
+      <div class="dd-painel" id="dd-2"><div class="dd-cols"><div><p class="olho">Fisioterapia</p><a href="tratamento-diastase-abdominal.html">Diástase abdominal</a><a href="tratamento-laser-joelho.html">Laser para artrose e joelho</a><a href="tratamento-fisioterapia-domiciliar.html">Fisioterapia domiciliar</a></div><div><p class="olho">Estética e integrativa</p><a href="tratamento-metodo-gelo-x.html">Método Gelo X</a><a href="tratamento-drenagem-linfatica.html">Drenagem linfática manual</a><a href="tratamento-terapia-capilar.html">Terapia capilar com laser</a><a href="tratamento-auriculoterapia.html">Auriculoterapia</a><a href="tratamento-ventosaterapia.html">Ventosaterapia</a><a href="tratamentos.html">Todos os tratamentos</a></div><figure class="dd-foto"><img src="img/banco/sala-luz-900.webp" alt="Sala de atendimento com maca e luz natural" width="900" height="600" loading="lazy"><figcaption>Todo plano começa por uma avaliação individual.</figcaption></figure></div></div>
+    </div>
+    <div class="dd"><button type="button" class="dd-bt" aria-expanded="false" aria-controls="dd-3">Sobre</button>
+      <div class="dd-painel dd-curto" id="dd-3"><div class="dd-cols"><div><p class="olho">Clínica</p><a href="a-clinica.html">A Dra. Marina</a><a href="pacotes.html">Monte o seu pacote</a><a href="duvidas.html">Dúvidas frequentes</a></div><div><p class="olho">Informações</p><a href="agendar.html">Agendar avaliação</a><a href="contato.html">Endereço e contato</a><a href="privacidade.html">Privacidade</a></div></div></div>
+    </div>
+  </nav>
+  <a class="pilula topo-wa" href="#" data-wa="Olá! Vi o site da Clínica LEMAHE e tenho uma dúvida.">WhatsApp</a>
+  <a class="pilula topo-ag" href="agendar.html">Agendar</a>
+  <button type="button" class="hamb" aria-expanded="false" aria-controls="menu-cel" aria-label="Abrir menu"><span></span><span></span><span></span></button>
+</header>
 
-<section class="sec" aria-labelledby="ind-t">
-  <div class="sec-cab"><p class="olho">Para quem</p><h2 id="ind-t" class="caixa">Pode ser indicado para</h2><p>A indicação é confirmada na avaliação, depois de conhecer o seu histórico.</p></div>
-  <div class="ind-grade"><div class="ind anima"><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><p>Quem tem dificuldade para ir até a clínica</p></div><div class="ind anima"><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><p>Quem está em recuperação e precisa de apoio em casa</p></div><div class="ind anima"><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><p>Quem tem limitações de mobilidade</p></div><div class="ind anima"><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><p>Idosos que preferem o conforto de casa</p></div></div>
-</section>
+<nav class="menu-cel" id="menu-cel" aria-label="Menu do celular" hidden>
+  <a href="index.html">Início</a><a href="tratamentos.html">Tratamentos</a>
+  <div class="mc-sub"><a href="tratamento-diastase-abdominal.html">Diástase abdominal</a><a href="tratamento-metodo-gelo-x.html">Método Gelo X</a><a href="tratamento-drenagem-linfatica.html">Drenagem linfática manual</a><a href="tratamento-laser-joelho.html">Laser para artrose e joelho</a><a href="tratamento-terapia-capilar.html">Terapia capilar com laser</a><a href="tratamento-auriculoterapia.html">Auriculoterapia</a><a href="tratamento-ventosaterapia.html">Ventosaterapia</a><a href="tratamento-fisioterapia-domiciliar.html">Fisioterapia domiciliar</a></div>
+  <a href="a-clinica.html">A Dra. Marina</a><a href="pacotes.html">Monte o seu pacote</a><a href="duvidas.html">Dúvidas frequentes</a><a href="agendar.html">Agendar avaliação</a><a href="contato.html">Contato</a>
+  <a class="pilula" href="#" data-wa="Olá, Dra. Marina! Vi o site da Clínica LEMAHE e quero agendar uma avaliação.">Falar no WhatsApp</a>
+</nav>
 
-<section class="sec sec-creme" aria-labelledby="ps-t">
-  <div class="sec-cab"><p class="olho">Passo a passo</p><h2 id="ps-t" class="caixa">Como é o atendimento</h2></div>
-  <ol class="passos"><li class="anima"><span class="pr-n">01</span><h3>Contato</h3><p>Conversa sobre a necessidade, o endereço e a disponibilidade.</p></li><li class="anima"><span class="pr-n">02</span><h3>Avaliação</h3><p>A Dra. Marina conhece as suas condições e o ambiente.</p></li><li class="anima"><span class="pr-n">03</span><h3>Acompanhamento</h3><p>O plano é feito em casa, no seu ritmo.</p></li></ol>
-</section>
+<aside class="lateral" aria-label="Redes e atalhos">
+  <a href="https://www.instagram.com/dra.marinacguirardeli/" target="_blank" rel="noopener" aria-label="Instagram da Dra. Marina"><svg><use href="#i-insta"/></svg></a>
+  <a href="#" data-wa="Olá! Vi o site da Clínica LEMAHE e tenho uma dúvida." aria-label="WhatsApp"><svg><use href="#i-wa"/></svg></a>
+  <a href="contato.html" aria-label="Endereço"><svg><use href="#i-pin"/></svg></a>
+  <a href="pacotes.html" aria-label="Monte o seu pacote"><svg><use href="#i-pacote"/></svg></a>
+</aside>
+<button type="button" class="aba-agenda" data-abrir-agenda>Agendar avaliação</button>
 
-<section class="sec" aria-labelledby="cu-t">
-  <div class="cuidados"><div><p class="olho">Antes de começar</p><h2 id="cu-t" class="caixa">Cuidados importantes</h2></div><ul><li>Informe o histórico de saúde e os diagnósticos existentes.</li><li>Prepare um espaço seguro para o atendimento.</li><li>Deixe exames e relatórios à mão, se tiver.</li></ul></div>
-</section>
+<main id="conteudo">
+  <section class="pg-heroi" aria-labelledby="h-t">
+    <div class="pg-foto"><video data-auto muted loop playsinline preload="metadata" poster="video/banco/domiciliar.webp" width="1280" height="720" aria-label="Fisioterapia domiciliar (imagem ilustrativa)"><source src="video/banco/domiciliar.mp4" type="video/mp4"></video><span class="ilustra">Imagem ilustrativa</span></div>
+    <div class="pg-txt">
+      <svg class="floreio fl-1" aria-hidden="true"><use href="#i-floreio"/></svg>
+      <nav class="migalha anima" aria-label="Você está em"><a href="index.html">Início</a> <span aria-hidden="true">/</span> <a href="tratamentos.html">Tratamentos</a> <span aria-hidden="true">/</span> <span aria-current="page">Fisioterapia domiciliar</span></nav>
+      <p class="olho anima">Em casa · Orlândia e região</p>
+      <h1 id="h-t">Fisioterapia domiciliar</h1>
+      <p class="pg-sub anima">Atendimento fisioterapêutico na sua casa, com atenção à sua rotina, ao seu ambiente e às suas condições de saúde.</p>
+      <div class="pg-bts anima"><button type="button" class="pilula" data-abrir-agenda data-int="Fisioterapia domiciliar">Agendar avaliação</button><a class="pilula" href="#" data-wa="Olá, Dra. Marina! Quero saber mais sobre fisioterapia domiciliar.">WhatsApp</a></div><dl class="pg-ficha anima"><div><dt>formato</dt><dd>avaliação individual</dd></div><div><dt>onde</dt><dd>em casa</dd></div><div><dt>área</dt><dd>em casa</dd></div><div><dt>indicação</dt><dd>após avaliação</dd></div></dl>
+    </div>
+    <svg class="ondas" viewBox="0 0 1440 520" preserveAspectRatio="none" aria-hidden="true"></svg>
+  </section>
 
-<section class="sec sec-creme" aria-labelledby="fq-t">
-  <div class="faq"><p class="olho">Perguntas</p><h2 id="fq-t" class="caixa" style="margin:14px 0 20px">Dúvidas sobre fisioterapia domiciliar</h2><details><summary>A clínica atende em casa?</summary><p>Sim. A Dra. Marina faz fisioterapia domiciliar, conforme a avaliação da necessidade e a disponibilidade de agenda.</p></details><details><summary>Quais cidades são atendidas?</summary><p>A referência é Orlândia (SP). Consulte a disponibilidade para Morro Agudo, Sales Oliveira, Nuporanga e São Joaquim da Barra.</p></details><details><summary>Como é a primeira visita?</summary><p>Primeiro conversamos sobre a sua necessidade. A avaliação considera o histórico, a funcionalidade e o ambiente da casa.</p></details><details><summary>Preciso ter equipamentos em casa?</summary><p>Não necessariamente. Os recursos dependem do planejamento, e a profissional orienta antes sobre o que for preciso.</p></details>
-  <p class="faq-pe">Tem outra dúvida? Veja as <a href="duvidas.html">dúvidas frequentes</a> ou chame no <a href="https://wa.me/5516992884458?text=Ol%C3%A1%21%20Vi%20o%20site%20da%20Cl%C3%ADnica%20LEMAHE%20e%20tenho%20uma%20d%C3%BAvida." target="_blank" rel="noopener">WhatsApp</a>.</p></div>
-</section>
+  <section class="tr-sobre" aria-labelledby="sb-t">
+    <div class="tr-sobre-foto anima"><img src="img/banco/alongamento-1600.webp" srcset="img/banco/alongamento-900.webp 900w, img/banco/alongamento-1600.webp 1600w" sizes="(max-width: 960px) 100vw, 46vw" alt="Ambiente de atendimento (imagem ilustrativa)" width="1600" height="1067" loading="lazy"><span class="ilustra">Imagem ilustrativa</span></div>
+    <div class="tr-sobre-tx">
+      <svg class="folhinha" aria-hidden="true"><use href="#i-folha"/></svg>
+      <p class="olho">O tratamento</p>
+      <h2 id="sb-t" class="caixa">O cuidado pode chegar até você</h2>
+      <p>A fisioterapia domiciliar é o atendimento feito na casa do paciente. O acompanhamento acontece no ambiente em que a pessoa vive, considerando a rotina, a mobilidade e as necessidades do dia a dia. Exercícios e recursos são definidos depois da avaliação individual.</p>
+      <ul class="tr-icones"><li><svg class="ic" viewBox="0 0 48 48" aria-hidden="true"><use href="#i-pessoa"/></svg><span>Atendimento feito pela Dra. Marina, fisioterapeuta (CREFITO-3 216312-F)</span></li><li><svg class="ic" viewBox="0 0 48 48" aria-hidden="true"><use href="#i-relogio"/></svg><span>Plano definido na avaliação, sem número de sessões prometido</span></li></ul>
+    </div>
+  </section>
 
-<section class="proximo" aria-labelledby="px-t">
-  <figure><img src="img/site/p-diastase-900.webp" alt="" width="900" height="620" loading="lazy"></figure>
-  <div><p class="olho">Próximo tratamento</p><h2 id="px-t">Diástase abdominal</h2><p>Cuidado fisioterapêutico para a musculatura do abdômen, com exercícios e recursos escolhidos para você.</p><a class="pilula" href="tratamento-diastase-abdominal.html">Saiba mais</a></div>
-</section>
+  <section class="tr-preco" aria-labelledby="pr-t">
+    <p class="olho">Valores e informações</p>
+    <h2 id="pr-t" class="caixa">Cada plano é montado para você</h2>
+    <p class="tr-preco-tx">A clínica não divulga preços no site: o valor depende da avaliação, da quantidade de sessões e de onde acontece o atendimento. Você recebe o orçamento pelo WhatsApp, sem compromisso.</p>
+    <div class="tr-caixa anima">
+        <div class="tr-cel tr-cel-grande"><p class="tr-rot">primeiro passo</p><p class="tr-valor">Avaliação individual</p><p class="tr-pe">com a Dra. Marina</p></div>
+        <div class="tr-cel"><p class="tr-rot">onde</p><p class="tr-valor tr-valor-m">Em casa</p><p class="tr-pe">conforme a agenda</p></div>
+    </div>
+  </section>
 
-<section class="escuro escuro-curto" aria-labelledby="fim-t">
-  <div class="folhas" aria-hidden="true"></div>
-  <h2 id="fim-t">O cuidado vai até você</h2>
-  <p class="es-txt">Consulte a disponibilidade de fisioterapia domiciliar.</p>
-  <div class="bts"><a class="pilula" href="agendar.html?t=fisioterapia-domiciliar">Agendar avaliação</a><a class="pilula" href="pacotes.html?t=fisioterapia-domiciliar">Monte o seu pacote</a></div>
-</section>
+  <section class="tr-tabela" aria-labelledby="tb-t">
+    <svg class="floreio fl-tab" aria-hidden="true"><use href="#i-floreio"/></svg>
+    <h2 id="tb-t" class="caixa">Indicações e detalhes</h2>
+    <div class="tabela-rola" tabindex="0" role="region" aria-labelledby="tb-t"><table class="tabela"><thead><tr><th scope="col">Situação</th><th scope="col">Foco do atendimento</th><th scope="col">Onde</th></tr></thead><tbody><tr><th scope="row">Dificuldade para sair de casa</th><td>Mobilidade e funções do dia a dia</td><td>Em casa</td></tr><tr><th scope="row">Recuperação depois de internação</th><td>Retomada gradual, com segurança</td><td>Em casa</td></tr><tr><th scope="row">Idosos</th><td>Equilíbrio, força e prevenção de quedas</td><td>Em casa</td></tr><tr><th scope="row">Dor e rigidez</th><td>Exercícios e recursos indicados</td><td>Em casa</td></tr></tbody></table></div>
+    <p class="tr-nota">A indicação é confirmada na avaliação individual. A resposta ao tratamento varia de pessoa para pessoa.</p>
+  </section>
+
+  <section class="tr-passos" aria-labelledby="ps-t">
+    <p class="olho">Passo a passo</p>
+    <h2 id="ps-t" class="caixa">Como funciona com a Dra.&nbsp;Marina</h2>
+    <ol class="passos"><li class="anima"><span class="passo-n">01</span><h3>Contato</h3><p>Conversa sobre a necessidade, o endereço e a disponibilidade.</p></li><li class="anima"><span class="passo-n">02</span><h3>Avaliação</h3><p>A Dra. Marina conhece as suas condições e o ambiente.</p></li><li class="anima"><span class="passo-n">03</span><h3>Acompanhamento</h3><p>O plano é feito em casa, no seu ritmo.</p></li><li class="anima"><span class="passo-n">04</span><h3>Orientações para casa</h3><p>Você recebe orientações para o dia a dia entre as sessões, por escrito quando for preciso.</p></li></ol>
+  </section>
+
+  <section class="tr-duas" aria-labelledby="pq-t">
+    <h2 id="pq-t" class="sr">Para quem é e quando não fazer</h2>
+    <div class="duas-c anima"><p class="olho">Para quem é</p><h3>Pode ser indicado para</h3><ul class="lista-ic"><li><svg viewBox="0 0 30 30" aria-hidden="true"><use href="#i-check"/></svg><span>Quem tem dificuldade para ir até a clínica</span></li><li><svg viewBox="0 0 30 30" aria-hidden="true"><use href="#i-check"/></svg><span>Quem está em recuperação e precisa de apoio em casa</span></li><li><svg viewBox="0 0 30 30" aria-hidden="true"><use href="#i-check"/></svg><span>Quem tem limitações de mobilidade</span></li><li><svg viewBox="0 0 30 30" aria-hidden="true"><use href="#i-check"/></svg><span>Idosos que preferem o conforto de casa</span></li></ul></div>
+    <div class="duas-c anima"><p class="olho">Quando não fazer</p><h3>Avaliamos com cuidado em caso de</h3><ul class="lista-ic lista-x"><li><svg viewBox="0 0 30 30" aria-hidden="true"><use href="#i-x"/></svg><span>Sem liberação médica quando ela for necessária</span></li><li><svg viewBox="0 0 30 30" aria-hidden="true"><use href="#i-x"/></svg><span>Febre ou mal-estar no dia (remarcamos)</span></li><li><svg viewBox="0 0 30 30" aria-hidden="true"><use href="#i-x"/></svg><span>Ambiente sem espaço seguro (orientamos antes)</span></li><li><svg viewBox="0 0 30 30" aria-hidden="true"><use href="#i-x"/></svg><span>Endereço fora da área atendida (consulte)</span></li></ul></div>
+  </section>
+
+  <section class="tr-cuidados" aria-labelledby="cd-t">
+    <p class="olho">Cuidados</p>
+    <h2 id="cd-t" class="caixa">Cuidados antes e depois</h2>
+    <div class="cuid-grade">
+      <div class="cuid anima"><h3>Antes da sessão</h3><ul class="lista-ic"><li><svg viewBox="0 0 30 30" aria-hidden="true"><use href="#i-check"/></svg><span>Separe exames e relatórios</span></li><li><svg viewBox="0 0 30 30" aria-hidden="true"><use href="#i-check"/></svg><span>Deixe um espaço livre e seguro</span></li><li><svg viewBox="0 0 30 30" aria-hidden="true"><use href="#i-check"/></svg><span>Tenha por perto a lista de medicamentos</span></li><li><svg viewBox="0 0 30 30" aria-hidden="true"><use href="#i-check"/></svg><span>Combine o horário com quem acompanha</span></li></ul></div>
+      <div class="cuid anima"><h3>Depois da sessão</h3><ul class="lista-ic"><li><svg viewBox="0 0 30 30" aria-hidden="true"><use href="#i-check"/></svg><span>Faça os exercícios orientados</span></li><li><svg viewBox="0 0 30 30" aria-hidden="true"><use href="#i-check"/></svg><span>Mantenha o ambiente sem tapetes soltos</span></li><li><svg viewBox="0 0 30 30" aria-hidden="true"><use href="#i-check"/></svg><span>Anote dúvidas para a próxima visita</span></li><li><svg viewBox="0 0 30 30" aria-hidden="true"><use href="#i-check"/></svg><span>Avise a clínica se algo mudar</span></li></ul></div>
+    </div>
+  </section>
+
+  <section class="tr-faq" aria-labelledby="fq-t">
+    <h2 id="fq-t" class="caixa">Perguntas sobre fisioterapia domiciliar</h2>
+    <div class="faq-grupo"><h3 class="faq-tit">Gerais</h3><details class="perg"><summary><span>A clínica atende em casa?</span><span class="perg-ic" aria-hidden="true"><svg viewBox="0 0 40 16"><use href="#i-seta"/></svg></span></summary><p>Sim. A Dra. Marina faz fisioterapia domiciliar, conforme a avaliação da necessidade e a disponibilidade de agenda.</p></details><details class="perg"><summary><span>Quais cidades são atendidas?</span><span class="perg-ic" aria-hidden="true"><svg viewBox="0 0 40 16"><use href="#i-seta"/></svg></span></summary><p>A referência é Orlândia (SP). Consulte a disponibilidade para Morro Agudo, Sales Oliveira, Nuporanga e São Joaquim da Barra.</p></details></div>
+    <div class="faq-grupo"><h3 class="faq-tit">Indicação e sessões</h3><details class="perg"><summary><span>Como é a primeira visita?</span><span class="perg-ic" aria-hidden="true"><svg viewBox="0 0 40 16"><use href="#i-seta"/></svg></span></summary><p>Primeiro conversamos sobre a sua necessidade. A avaliação considera o histórico, a funcionalidade e o ambiente da casa.</p></details><details class="perg"><summary><span>Preciso ter equipamentos em casa?</span><span class="perg-ic" aria-hidden="true"><svg viewBox="0 0 40 16"><use href="#i-seta"/></svg></span></summary><p>Não necessariamente. Os recursos dependem do planejamento, e a profissional orienta antes sobre o que for preciso.</p></details></div>
+    <p class="tr-faq-mais">Tem outra dúvida? Veja <a href="duvidas.html">todas as dúvidas frequentes</a> ou chame no <a href="#" data-wa="Olá, Dra. Marina! Tenho uma dúvida sobre fisioterapia domiciliar.">WhatsApp</a>.</p>
+  </section>
+
+  <section class="prox" aria-labelledby="px-t">
+    <div class="prox-foto anima"><video data-auto muted loop playsinline preload="metadata" poster="video/banco/diastase.webp" width="1280" height="720" aria-label="Diástase abdominal (imagem ilustrativa)"><source src="video/banco/diastase.mp4" type="video/mp4"></video><span class="ilustra">Imagem ilustrativa</span></div>
+    <div class="prox-tx">
+      <svg class="floreio" aria-hidden="true"><use href="#i-floreio"/></svg>
+      <p class="olho">Próximo tratamento</p>
+      <svg class="ic prox-ic" viewBox="0 0 48 48" aria-hidden="true"><use href="#i-abdomen"/></svg>
+      <h2 id="px-t">Diástase abdominal</h2>
+      <p>Cuidado fisioterapêutico para a musculatura do abdômen, com exercícios e recursos escolhidos para você.</p>
+      <a class="pilula" href="tratamento-diastase-abdominal.html">Saiba mais</a>
+    </div>
+  </section>
+  <section class="escuro escuro-curto" aria-labelledby="cta-t">
+    <div class="petalas" aria-hidden="true"></div>
+    <h2 id="cta-t">O cuidado vai até você</h2>
+    <p class="es-txt">Consulte a disponibilidade de fisioterapia domiciliar.</p>
+    <div class="es-bts"><button type="button" class="pilula pilula-clara" data-abrir-agenda data-int="Fisioterapia domiciliar">Agendar avaliação</button><a class="pilula pilula-clara" href="#" data-wa="Olá, Dra. Marina! Quero tirar uma dúvida antes de agendar.">Falar no WhatsApp</a></div>
+  </section>
 </main>
-<footer class="rodape" id="rodape">
+
+<footer class="rodape" id="contato">
   <div class="rd-topo">
-    <div><img class="rd-logo" src="img/logo-sem-fundo.webp" alt="LEMAHE: fisioterapia, estética, massagem e bem-estar" width="220" height="148" loading="lazy">
-      <p class="rd-frase">Fisioterapia, estética avançada e terapia integrativa em Orlândia, com avaliação individual em cada começo.</p></div>
-    <div class="bts"><a class="pilula pilula-cheia" href="agendar.html">Agendar avaliação</a><a class="pilula" href="pacotes.html">Monte o seu pacote</a></div>
+    <div><img class="rd-logo" src="img/logo-sem-fundo.webp" alt="LEMAHE: fisioterapia, estética, massagem e bem-estar" width="230" height="155" loading="lazy"><p class="rd-frase">Fisioterapia, estética avançada e terapia integrativa em Orlândia, com avaliação individual em cada começo.</p></div>
+    <div class="rd-bts"><button type="button" class="pilula pilula-clara" data-abrir-agenda>Agendar avaliação</button><a class="pilula pilula-clara" href="pacotes.html">Monte o seu pacote <svg aria-hidden="true"><use href="#i-pacote"/></svg></a></div>
   </div>
   <div class="rd-cols">
     <div><p class="rd-rot">Tratamentos</p><a href="tratamento-diastase-abdominal.html">Diástase abdominal</a><a href="tratamento-metodo-gelo-x.html">Método Gelo X</a><a href="tratamento-drenagem-linfatica.html">Drenagem linfática manual</a><a href="tratamento-laser-joelho.html">Laser para artrose e joelho</a><a href="tratamento-terapia-capilar.html">Terapia capilar com laser</a><a href="tratamento-auriculoterapia.html">Auriculoterapia</a><a href="tratamento-ventosaterapia.html">Ventosaterapia</a><a href="tratamento-fisioterapia-domiciliar.html">Fisioterapia domiciliar</a><a href="tratamentos.html">Todos os tratamentos</a></div>
-    <div><p class="rd-rot">A clínica</p><a href="a-clinica.html">A Dra. Marina</a><a href="pacotes.html">Monte o seu pacote</a><a href="duvidas.html">Dúvidas frequentes</a><p class="rd-rot">Informações</p><a href="agendar.html">Agendar avaliação</a><a href="contato.html">Contato</a><a href="privacidade.html">Privacidade</a></div>
-    <div><p class="rd-rot">Atendimento</p><p>Na clínica, com hora marcada</p><p>Em casa: Orlândia e região, conforme a agenda</p><p>Horários combinados pelo WhatsApp</p></div>
-    <div><p class="rd-rot">Onde estamos</p><p>Av. C, 1270<br>Orlândia (SP)</p><a href="https://www.google.com/maps/search/?api=1&query=Av.+C,+1270,+Orl%C3%A2ndia+-+SP" target="_blank" rel="noopener">Como chegar</a><a href="https://wa.me/5516992884458?text=Ol%C3%A1%21%20Vi%20o%20site%20da%20Cl%C3%ADnica%20LEMAHE%20e%20tenho%20uma%20d%C3%BAvida." target="_blank" rel="noopener">WhatsApp (16) 99288-4458</a></div>
+    <div><p class="rd-rot">Sobre</p><a href="a-clinica.html">A Dra. Marina</a><a href="pacotes.html">Monte o seu pacote</a><a href="duvidas.html">Dúvidas frequentes</a><p class="rd-rot">Informações</p><a href="agendar.html">Agendar avaliação</a><a href="contato.html">Contato</a><a href="privacidade.html">Política de privacidade</a></div>
+    <div><p class="rd-rot">Atendimento</p><p>Na clínica, com hora marcada</p><p>Em casa: Orlândia e região</p><p>Horários combinados pelo WhatsApp</p></div>
+    <div><p class="rd-rot">Contato</p><p>Av. C, 1270<br>Orlândia (SP)</p><p>Fisioterapia domiciliar também em Morro Agudo, Sales Oliveira, Nuporanga e São Joaquim da Barra (consulte)</p><a href="#" data-wa="Olá! Vi o site da Clínica LEMAHE e tenho uma dúvida.">Chamar no WhatsApp</a></div>
   </div>
-  <div class="rd-fone"><a href="https://wa.me/5516992884458?text=Ol%C3%A1%21%20Vi%20o%20site%20da%20Cl%C3%ADnica%20LEMAHE%20e%20tenho%20uma%20d%C3%BAvida." target="_blank" rel="noopener">(16) 99288-4458</a>
-    <div class="rd-redes"><a href="https://www.instagram.com/dra.marinacguirardeli/" target="_blank" rel="noopener" aria-label="Instagram da Dra. Marina"><svg aria-hidden="true"><use href="#i-insta"/></svg></a><a href="https://wa.me/5516992884458?text=Ol%C3%A1%21%20Vi%20o%20site%20da%20Cl%C3%ADnica%20LEMAHE%20e%20tenho%20uma%20d%C3%BAvida." target="_blank" rel="noopener" aria-label="WhatsApp da clínica"><svg aria-hidden="true"><use href="#i-wa"/></svg></a><a href="https://www.google.com/maps/search/?api=1&query=Av.+C,+1270,+Orl%C3%A2ndia+-+SP" target="_blank" rel="noopener" aria-label="Ver no mapa"><svg aria-hidden="true"><use href="#i-mapa"/></svg></a></div></div>
-  <p class="rd-legal">LEMAHE – Fisioterapia, Estética Avançada e Terapia Integrativa · Responsável técnica: Dra. Marina Caetano Guirardeli, fisioterapeuta, CREFITO-3 216312-F. Os tratamentos dependem de avaliação individual e a resposta varia de pessoa para pessoa. Imagens marcadas como ilustrativas são de banco de imagens (Pexels, licença livre); as demais vêm do Instagram da clínica. © <span data-ano>2026</span> · Site feito pela <a href="https://bluerose-store.com" target="_blank" rel="noopener">Blue Rose</a>.</p>
+  <div class="rd-fone"><a href="#" data-wa="Olá, Dra. Marina! Vi o site da Clínica LEMAHE e quero agendar uma avaliação.">(16) 99288-4458</a><span class="rd-redes"><a href="https://www.instagram.com/dra.marinacguirardeli/" target="_blank" rel="noopener" aria-label="Instagram"><svg><use href="#i-insta"/></svg></a><a href="#" data-wa="Olá! Vi o site da Clínica LEMAHE e tenho uma dúvida." aria-label="WhatsApp"><svg><use href="#i-wa"/></svg></a><a href="contato.html" aria-label="Endereço"><svg><use href="#i-pin"/></svg></a></span></div>
+  <p class="rd-legal">Responsável técnica: Dra. Marina Caetano Guirardeli, fisioterapeuta, CREFITO-3 216312-F · Os tratamentos dependem de avaliação individual e a resposta varia de pessoa para pessoa; não publicamos fotos de antes e depois nem depoimentos de pacientes · Fotos e vídeos marcados como ilustrativos: Pexels (licença livre), não são pacientes da clínica · Vídeos “Do Instagram”: perfil @dra.marinacguirardeli · <a href="privacidade.html">Política de privacidade</a> · © <span data-ano>2026</span> LEMAHE – Fisioterapia, Estética Avançada e Terapia Integrativa · Site feito pela Blue Rose</p>
 </footer>
-<a class="zap" href="https://wa.me/5516992884458?text=Ol%C3%A1%21%20Vi%20o%20site%20da%20Cl%C3%ADnica%20LEMAHE%20e%20tenho%20uma%20d%C3%BAvida." target="_blank" rel="noopener" aria-label="Falar no WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .2-1.2c-.1-.2-.3-.2-.5-.3z"/></svg></a>
+
+<dialog class="dica-janela" id="dica-janela" aria-labelledby="dj-t">
+  <button type="button" class="ag-fechar dj-fechar" aria-label="Fechar"></button>
+  <video class="dj-video" muted loop playsinline controls preload="none" width="720" height="720"></video>
+  <div class="dj-tx"><p class="dj-olho">Do Instagram</p><h2 id="dj-t"></h2><p class="dj-dica"></p><button type="button" class="pilula" data-abrir-agenda>Agendar avaliação</button></div>
+</dialog>
+<dialog class="agenda" id="agenda" aria-labelledby="ag-t">
+  <button type="button" class="ag-fechar" aria-label="Fechar"></button>
+  <svg class="floreio" aria-hidden="true"><use href="#i-floreio"/></svg>
+  <div class="ag-corpo">
+    <p class="ag-olho">Agende a sua</p><h2 id="ag-t">Avaliação</h2>
+    <form id="ag" class="ag" novalidate><select id="ag-int" name="int"><option>Ainda não sei</option><option>Diástase abdominal</option><option>Método Gelo X</option><option>Drenagem linfática manual</option><option>Laser para artrose e joelho</option><option>Terapia capilar com laser</option><option>Auriculoterapia</option><option>Ventosaterapia</option><option>Fisioterapia domiciliar</option><option>Protocolos corporais (HidroHot 360°, lipedema, LipoDetox)</option><option>Laser ILIB</option><option>Funcional e facilitação neuromuscular</option><option>Monte o seu pacote</option></select></form>
+  </div>
+</dialog>
+<a class="zap" href="#" data-wa="Olá! Vi o site da Clínica LEMAHE e tenho uma dúvida." aria-label="Falar no WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .2-1.2c-.1-.2-.3-.2-.5-.3z"/></svg></a>
 </body>
 </html>

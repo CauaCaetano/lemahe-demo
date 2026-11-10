@@ -1,0 +1,134 @@
+/* Clínica LEMAHE · identidade sobre o molde Bianca Moraes (estilo.css + paginas.css ficam iguais ao molde, só recoloridos).
+   Paleta oficial: oliva #536344, sálvia #788568, dourado #C49A59, creme #F6EFE3, marrom #65472F. Títulos em Marcellus. */
+:root {
+  --acc: #C49A59; --acc-2: #536344; --blush: #F6EFE3; --blush-2: #EFE5D3; --blush-3: #E2D5BD; --traco: #aab394;
+  --tx: #23261d; --tx-2: #4d5044; --preto: #1c2216; --onda: #e7dfcd; --salvia: #788568; --marrom: #65472F;
+  --tit: 'Marcellus', Georgia, serif;
+}
+/* títulos em Marcellus (o molde usa Unbounded 300) */
+.heroi h1, .pg-txt h1 { font-weight: 400; letter-spacing: 0; }
+.heroi h1 span + span { color: var(--acc-2); }
+
+/* topo: a logo da LEMAHE some sobre foto e sobre verde, então o topo é sempre claro */
+.topo { background: rgba(255, 255, 255, .97); box-shadow: 0 1px 0 rgba(196, 154, 89, .25); height: 104px; }
+.topo.rolou { height: 80px; }
+.marca { flex-direction: row; display: flex; align-items: center; gap: 12px; }
+.marca img { width: auto; display: block; transition: height .35s; }
+.marca .m-simbolo { height: 60px; }
+.marca .m-nome { height: 32px; }
+.topo.rolou .m-simbolo { height: 48px; }
+.topo.rolou .m-nome { height: 26px; }
+.dd-bt, .menu > a { color: var(--tx); }
+.topo-ag { background: var(--acc-2) !important; border-color: var(--acc-2); color: #fff; }
+.topo-ag:hover { background: var(--marrom) !important; border-color: var(--marrom); }
+@media (min-width: 961px) { .heroi-txt { padding-top: 104px !important; } }
+@media (max-width: 960px) {
+  .topo, .topo.rolou { height: 76px; }
+  .marca .m-simbolo, .topo.rolou .m-simbolo { height: 44px; }
+  .marca .m-nome, .topo.rolou .m-nome { height: 22px; }
+}
+@media (max-width: 380px) { .marca .m-nome { display: none; } }
+.menu-cel { inset: 76px 0 0; }
+
+/* abertura: fotos em fusão com zoom lento (ken burns), como no molde */
+.heroi-fotos { background: #b5ae98; }
+.heroi-fotos::after { background: linear-gradient(180deg, rgba(83, 99, 68, .22), rgba(101, 71, 47, .08)); mix-blend-mode: normal; }
+.heroi-selo { position: absolute; z-index: 3; left: 20px; bottom: 20px; display: flex; align-items: center; gap: 10px; margin: 0; background: rgba(255, 255, 255, .94); padding: 10px 16px 10px 10px; border-radius: 999px; font: 600 12px/1.3 var(--f); letter-spacing: .03em; color: var(--tx); max-width: calc(100% - 40px); }
+.heroi-selo img { width: 34px; height: 34px; object-fit: contain; flex: none; }
+
+/* selo "ilustrativa" discreto nos vídeos e fotos de banco */
+.caso-foto video { width: 100%; height: 100%; object-fit: cover; display: block; }
+.ilustra { position: absolute; z-index: 2; right: 10px; top: 10px; background: rgba(255, 255, 255, .88); color: var(--tx-2); font: 600 9.5px/1 var(--f); letter-spacing: .1em; text-transform: uppercase; padding: 6px 9px; border-radius: 999px; pointer-events: none; }
+.pg-foto, .tr-sobre-foto, .prox-foto, .plano-foto, .galeria figure { position: relative; }
+.pg-foto video, .tr-sobre-foto video, .prox-foto video { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+/* como podemos ajudar: corpo inteiro em traço fino com pontos, frente e costas */
+.aj-corpo { position: relative; margin: 0; align-self: end; justify-self: center; width: min(100%, 470px); }
+.corpo-svg { width: 100%; height: auto; display: block; overflow: visible; }
+.corpo-svg path, .corpo-svg ellipse, .corpo-svg circle, .corpo-svg line { fill: none; stroke: var(--traco); stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
+.corpo-svg .pele { fill: #fbf7ef; }
+.corpo-svg .fino { stroke-width: 1.5; }
+.corpo-svg .ouro { stroke: #d9bd8c; }
+.corpo-svg .contorno { stroke-dasharray: 2600; stroke-dashoffset: 2600; transition: stroke-dashoffset 3s ease; }
+.ajuda.ver .corpo-svg .contorno { stroke-dashoffset: 0; }
+.corpo-svg .lado { transition: opacity .5s; }
+.aj-corpo[data-lado="frente"] .costas, .aj-corpo[data-lado="costas"] .frente { opacity: 0; visibility: hidden; }
+.pontos-corpo { position: absolute; inset: 0; }
+.pontos-corpo .ponto[hidden] { display: none; }
+.ponto { border-color: #66705a; }
+.ponto::before { background: var(--acc-2); }
+.ponto[aria-pressed="true"] { border-color: var(--acc-2); background: rgba(170, 179, 148, .35); }
+.ponto span { background: var(--acc-2); }
+.ponto-casa { width: 52px !important; height: 52px !important; margin: -26px 0 0 -26px !important; border: 1.5px solid var(--acc) !important; background: #fff !important; animation: none !important; display: grid; place-items: center; }
+.ponto-casa::before { display: none; }
+.ponto-casa svg { width: 26px; height: 26px; fill: none; stroke: var(--acc-2); stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.vira-corpo { position: absolute; left: 50%; bottom: 8px; transform: translateX(-50%); min-height: 44px; padding: 0 20px; font-size: 11.5px; background: #fff; z-index: 2; }
+.aj-info dd { white-space: normal !important; }
+
+/* vale-presente do molde vira o cartão do pacote */
+.cp-cartao .cp-logo { width: 62%; margin: 0 auto 4px; }
+.cp-cartao ul { list-style: none; margin: 4px 0 0; padding: 0; display: grid; gap: 4px; text-align: left; font-size: clamp(10px, 1vw, 13px); }
+.cp-cartao li { display: flex; gap: 8px; align-items: center; border-bottom: 1px solid var(--blush-3); padding-bottom: 4px; }
+.cp-cartao li i { width: 12px; height: 12px; border: 1.5px solid var(--acc); border-radius: 3px; flex: none; }
+.cp-cartao li.sim i { background: var(--acc-2); border-color: var(--acc-2); }
+
+/* rodapé claro: a logo some no fundo escuro */
+.rodape { background: var(--blush); color: var(--tx); border-top: 1px solid var(--blush-3); }
+.rd-logo { width: 230px; height: auto; display: block; }
+.rd-cols a:hover, .rd-fone > a:hover { color: var(--acc-2); }
+.rd-rot { color: var(--marrom); }
+.rd-legal { color: var(--tx-2); }
+.rodape .pilula-clara { color: var(--tx); }
+.rodape .pilula-clara:hover { color: #fff; }
+.rd-redes a { color: var(--tx); }
+
+/* monte o seu pacote (página pacotes) */
+.pac-sec { padding: 110px var(--lado); background: var(--blush); }
+.pac-sec > .olho, .pac-sec > h2 { text-align: center; }
+.pac-sec > h2 { margin: 18px 0 40px; }
+.pacote { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 30px; max-width: 1200px; margin: 0 auto; align-items: start; }
+.pacote fieldset { border: 0; padding: 0; margin: 0 0 26px; }
+.pacote legend { font: 600 11.5px/1.2 var(--f); letter-spacing: .12em; text-transform: uppercase; color: var(--acc-2); margin-bottom: 14px; }
+.pac-itens { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.pac-linha { display: flex; flex-wrap: wrap; gap: 10px; }
+.chip-op { position: relative; display: flex; align-items: center; gap: 12px; min-height: 54px; padding: 10px 18px; border: 1px solid var(--blush-3); border-radius: 999px; background: #fff; font: 500 15px/1.3 var(--f); cursor: pointer; }
+.chip-op input { position: absolute; opacity: 0; pointer-events: none; }
+.chip-op i { width: 18px; height: 18px; border: 1.5px solid var(--acc); border-radius: 4px; flex: none; }
+.chip-op input[type=radio] + i { border-radius: 50%; }
+.chip-op:has(input:checked) { border-color: var(--acc-2); box-shadow: inset 0 0 0 1px var(--acc-2); background: var(--blush); }
+.chip-op input:checked + i { background: var(--acc-2); border-color: var(--acc-2); }
+.chip-op input:focus-visible + i { outline: 2px solid var(--acc-2); outline-offset: 2px; }
+.pac-resumo { position: sticky; top: 110px; background: #fff; border: 1px solid var(--acc); padding: 30px; }
+.pac-resumo h3 { font: 300 30px/1.15 var(--tit); margin: 10px 0 14px; }
+.pac-resumo ul { list-style: none; margin: 0 0 14px; padding: 0; border-top: 1px solid var(--blush-3); }
+.pac-resumo li { padding: 10px 0; border-bottom: 1px solid var(--blush-3); font-size: 15px; }
+.pac-resumo .pilula { width: 100%; margin-top: 10px; }
+.miudo { font-size: 13px; color: var(--tx-2); margin-top: 12px; }
+@media (max-width: 960px) { .pacote { grid-template-columns: 1fr; } .pac-resumo { position: static; } .pac-sec { padding: 70px 20px; } }
+@media (max-width: 560px) { .pac-itens { grid-template-columns: 1fr; } }
+
+/* agenda: dia e horário dentro dos passos */
+.ag-dias, .pf-dias { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; margin-bottom: 12px; }
+.ag-dia { display: grid; justify-items: center; gap: 2px; padding: 9px 2px; border: 1px solid var(--blush-3); background: #fff; cursor: pointer; font: 600 10.5px/1.1 var(--f); text-transform: uppercase; letter-spacing: .06em; border-radius: 10px; }
+.ag-dia b { font: 400 22px/1 var(--tit); }
+.ag-dia[aria-pressed="true"], .ag-hora[aria-pressed="true"] { background: var(--acc-2); color: #fff; border-color: var(--acc-2); }
+.ag-horas { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px; }
+.ag-hora { padding: 11px 4px; border: 1px solid var(--blush-3); border-radius: 999px; background: #fff; cursor: pointer; font: 500 14px/1 var(--f); }
+.ag-hora:disabled { opacity: .3; text-decoration: line-through; cursor: default; }
+.ag-demo-mini { font-size: 12.5px; color: var(--tx-2); margin-top: 10px; }
+.google-agenda { width: 100%; min-height: 680px; border: 1px solid var(--acc); background: #fff; }
+.ag-google { padding: 80px var(--lado); background: var(--blush); }
+@media (max-width: 560px) { .ag-horas { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+
+/* números e linha do tempo sem anos inventados */
+.lt-ano { font-size: 15px !important; }
+.mapa-real { width: 100%; aspect-ratio: 16 / 11; border: 0; outline: 1px solid var(--acc); outline-offset: 10px; }
+.zap { position: fixed; right: 18px; bottom: 18px; z-index: 40; display: grid; place-items: center; width: 56px; height: 56px; border-radius: 50%; background: var(--acc-2); color: #fff; box-shadow: 0 12px 30px -10px rgba(40, 50, 25, .6); }
+.zap svg { width: 27px; height: 27px; }
+@media (max-width: 960px) { .zap { bottom: 14px; right: 12px; width: 52px; height: 52px; } }
+@media (max-width: 960px) { .heroi-selo { top: calc(var(--topo-a, 76px) + 12px); bottom: auto; left: 12px; font-size: 11px; padding: 7px 12px 7px 7px; } .heroi-selo img { width: 26px; height: 26px; } }
+
+.vira-corpo { left: auto; right: 0; top: 0; bottom: auto; transform: none; }
+.aj-corpo { padding-bottom: 10px; }
+
+@media (max-width: 960px) { .aj-corpo { order: -1; max-width: 320px; margin: 0 auto 10px; } }
